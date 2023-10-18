@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct Location {
+    let name: String
+    let coverImage: String
+    let images: [String]
+    let description: String
+    let zone: String
+    let recommendations: [String]
+    let latitude: Double
+    let longitude: Double
+}
