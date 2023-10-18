@@ -11,6 +11,8 @@
 		F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C5A142ADED8BF006DCF61 /* ContentView.swift */; };
 		F05C5A172ADED8C0006DCF61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05C5A162ADED8C0006DCF61 /* Assets.xcassets */; };
 		F05C5A1A2ADED8C0006DCF61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05C5A192ADED8C0006DCF61 /* Preview Assets.xcassets */; };
+		F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F8F2AE04DE7007EEC49 /* Location.swift */; };
+		F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F912AE04EA3007EEC49 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		F05C5A142ADED8BF006DCF61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F05C5A162ADED8C0006DCF61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F05C5A192ADED8C0006DCF61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F0FE8F8F2AE04DE7007EEC49 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F0FE8F912AE04EA3007EEC49 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		F05C5A112ADED8BF006DCF61 /* CiaoNaples */ = {
 			isa = PBXGroup;
 			children = (
+				F0FE8F4A2AE00655007EEC49 /* Models */,
 				F05C5A122ADED8BF006DCF61 /* CiaoNaplesApp.swift */,
 				F05C5A142ADED8BF006DCF61 /* ContentView.swift */,
 				F05C5A162ADED8C0006DCF61 /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				F05C5A192ADED8C0006DCF61 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F0FE8F4A2AE00655007EEC49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0FE8F8F2AE04DE7007EEC49 /* Location.swift */,
+				F0FE8F912AE04EA3007EEC49 /* Category.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */,
+				F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */,
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,
+				F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
