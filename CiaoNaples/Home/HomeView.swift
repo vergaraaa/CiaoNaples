@@ -39,9 +39,14 @@ struct HomeView: View {
                                 }
                             }
                             
+                            Spacer()
+                            
                             Image("FirstView")
                                 .resizable()
-                                .frame(width: 190, height: 190, alignment: .center)
+                                .scaledToFit()
+                                .frame(width: 150, height: 150, alignment: .center)
+                            
+                            Spacer()
                             
                             VStack(spacing: 50) {
                                 NavigationLink (destination: Text("Daily Life")){
@@ -53,6 +58,8 @@ struct HomeView: View {
                                 }
                             }
                         }
+                        .padding(.horizontal)
+
                         
                         NavigationLink (destination: Text("Gardens")){
                             CategoryView(category: .gardens)
