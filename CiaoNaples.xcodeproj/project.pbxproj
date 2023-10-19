@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F01995172AE1686D006F6091 /* TestComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01995162AE1686D006F6091 /* TestComponent.swift */; };
 		F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C5A122ADED8BF006DCF61 /* CiaoNaplesApp.swift */; };
 		F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C5A142ADED8BF006DCF61 /* ContentView.swift */; };
 		F05C5A172ADED8C0006DCF61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05C5A162ADED8C0006DCF61 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F01995162AE1686D006F6091 /* TestComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestComponent.swift; sourceTree = "<group>"; };
 		F05C5A0F2ADED8BF006DCF61 /* CiaoNaples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiaoNaples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05C5A122ADED8BF006DCF61 /* CiaoNaplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiaoNaplesApp.swift; sourceTree = "<group>"; };
 		F05C5A142ADED8BF006DCF61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F01995132AE164DA006F6091 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F01995152AE16856006F6091 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F01995162AE1686D006F6091 /* TestComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F05C5A062ADED8BF006DCF61 = {
 			isa = PBXGroup;
 			children = (
@@ -55,7 +72,9 @@
 		F05C5A112ADED8BF006DCF61 /* CiaoNaples */ = {
 			isa = PBXGroup;
 			children = (
-				F0FE8F4A2AE00655007EEC49 /* Models */,
+				F01995152AE16856006F6091 /* Components */,
+				F01995132AE164DA006F6091 /* Home */,
+				F0FE8F4A2AE00655007EEC49 /* Model */,
 				F05C5A122ADED8BF006DCF61 /* CiaoNaplesApp.swift */,
 				F05C5A142ADED8BF006DCF61 /* ContentView.swift */,
 				F05C5A162ADED8C0006DCF61 /* Assets.xcassets */,
@@ -72,13 +91,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F0FE8F4A2AE00655007EEC49 /* Models */ = {
+		F0FE8F4A2AE00655007EEC49 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F0FE8F8F2AE04DE7007EEC49 /* Location.swift */,
 				F0FE8F912AE04EA3007EEC49 /* Category.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01995172AE1686D006F6091 /* TestComponent.swift in Sources */,
 				F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */,
 				F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */,
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,
