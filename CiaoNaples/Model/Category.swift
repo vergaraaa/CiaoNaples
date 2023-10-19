@@ -34,6 +34,19 @@ enum Category: Int, CaseIterable, Identifiable {
         }
     }
     
+    var displayName: String {
+        switch self {
+        case .foodAndDrinks: return "Food\n&\nDrinks"
+        case .food: return "Food"
+        case .drinks: return "Drinks"
+        case .dailyLife: return "Daily\nLife"
+        case .museums: return "Museums"
+        case .gardens: return "Gardens"
+        case .viewpoints: return "Viewpoints"
+        case .folkloricPlaces: return "Folkloric\nPlaces"
+        }
+    }
+    
     var image: String {
         switch self {
         case .foodAndDrinks: return "fork.knife"
