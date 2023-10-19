@@ -11,7 +11,18 @@ import SwiftUI
 struct CiaoNaplesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView{
+                ContentView()
+                    .tabItem {
+                        Image(systemName: "house")
+                    }
+                
+                //   favoriteViews()
+                // .tabItem {
+                //   Image(systemName: "star")
+                
+                //   Text("favorites places")
+            }
         }
     }
 }
