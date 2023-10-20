@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB668D462AE2A9EB00480B4B /* drinkStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D412AE2A9EB00480B4B /* drinkStruct.swift */; };
+		BB668D472AE2A9EB00480B4B /* foodClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D422AE2A9EB00480B4B /* foodClass.swift */; };
+		BB668D482AE2A9EB00480B4B /* drinkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D432AE2A9EB00480B4B /* drinkClass.swift */; };
+		BB668D492AE2A9EB00480B4B /* foodStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D442AE2A9EB00480B4B /* foodStruct.swift */; };
+		BB668D4A2AE2A9EB00480B4B /* foodedrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D452AE2A9EB00480B4B /* foodedrinkView.swift */; };
 		F01995172AE1686D006F6091 /* TestComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01995162AE1686D006F6091 /* TestComponent.swift */; };
 		F01995192AE16976006F6091 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01995182AE16976006F6091 /* HomeView.swift */; };
 		F019951B2AE169F2006F6091 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019951A2AE169F2006F6091 /* CategoryView.swift */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB668D412AE2A9EB00480B4B /* drinkStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkStruct.swift; sourceTree = "<group>"; };
+		BB668D422AE2A9EB00480B4B /* foodClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodClass.swift; sourceTree = "<group>"; };
+		BB668D432AE2A9EB00480B4B /* drinkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkClass.swift; sourceTree = "<group>"; };
+		BB668D442AE2A9EB00480B4B /* foodStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodStruct.swift; sourceTree = "<group>"; };
+		BB668D452AE2A9EB00480B4B /* foodedrinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodedrinkView.swift; sourceTree = "<group>"; };
 		F01995162AE1686D006F6091 /* TestComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestComponent.swift; sourceTree = "<group>"; };
 		F01995182AE16976006F6091 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F019951A2AE169F2006F6091 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
@@ -44,6 +54,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB668D402AE2A9EB00480B4B /* FoodAndDrinks */ = {
+			isa = PBXGroup;
+			children = (
+				BB668D412AE2A9EB00480B4B /* drinkStruct.swift */,
+				BB668D422AE2A9EB00480B4B /* foodClass.swift */,
+				BB668D432AE2A9EB00480B4B /* drinkClass.swift */,
+				BB668D442AE2A9EB00480B4B /* foodStruct.swift */,
+				BB668D452AE2A9EB00480B4B /* foodedrinkView.swift */,
+			);
+			path = FoodAndDrinks;
+			sourceTree = "<group>";
+		};
 		F01995132AE164DA006F6091 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +102,7 @@
 		F05C5A112ADED8BF006DCF61 /* CiaoNaples */ = {
 			isa = PBXGroup;
 			children = (
+				BB668D402AE2A9EB00480B4B /* FoodAndDrinks */,
 				F01995152AE16856006F6091 /* Components */,
 				F0A4AA6E2AE16E1900A83D01 /* Favorites */,
 				F01995132AE164DA006F6091 /* Home */,
@@ -187,7 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB668D492AE2A9EB00480B4B /* foodStruct.swift in Sources */,
+				BB668D472AE2A9EB00480B4B /* foodClass.swift in Sources */,
 				F01995172AE1686D006F6091 /* TestComponent.swift in Sources */,
+				BB668D4A2AE2A9EB00480B4B /* foodedrinkView.swift in Sources */,
+				BB668D462AE2A9EB00480B4B /* drinkStruct.swift in Sources */,
 				F019951B2AE169F2006F6091 /* CategoryView.swift in Sources */,
 				F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */,
 				F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */,
@@ -195,6 +222,7 @@
 				F01995192AE16976006F6091 /* HomeView.swift in Sources */,
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,
 				F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */,
+				BB668D482AE2A9EB00480B4B /* drinkClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
