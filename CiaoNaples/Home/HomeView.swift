@@ -24,18 +24,18 @@ struct HomeView: View {
                     
                     VStack {
                         NavigationLink(destination: Text("Food And Drinks")){
-                            CategoryView(category: .foodAndDrinks)
+                            CategoryView(title: "Food\n&\nDrinks", image: "fork.knife")
                         }
                         
                         HStack{
                             VStack(spacing: 50) {
                                 NavigationLink (destination: Text("Folkloric Places")){
-                                    CategoryView(category: .folkloricPlaces)
+                                    CategoryView(title: "Folkloric\nPlaces", image: "theatermasks")
                                 }
                                 
                                 
                                 NavigationLink (destination: Text("Viewpoints")){
-                                    CategoryView(category: .viewpoints)
+                                    CategoryView(title: "Viewpoints", image: "binoculars")
                                 }
                             }
                             
@@ -50,11 +50,11 @@ struct HomeView: View {
                             
                             VStack(spacing: 50) {
                                 NavigationLink (destination: Text("Daily Life")){
-                                    CategoryView(category: .dailyLife)
+                                    CategoryView(title: "Daily\nLife", image: "sun.haze")
                                 }
                                 
                                 NavigationLink (destination: Text("Museums")){
-                                    CategoryView(category: .museums)
+                                    CategoryView(title: "Museums", image: "building.columns")
                                 }
                             }
                         }
@@ -62,7 +62,7 @@ struct HomeView: View {
 
                         
                         NavigationLink (destination: Text("Gardens")){
-                            CategoryView(category: .gardens)
+                            CategoryView(title: "Gardens", image: "leaf")
                         }
                     }
                 }

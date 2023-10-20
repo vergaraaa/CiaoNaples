@@ -8,7 +8,6 @@
 import Foundation
 
 enum Category: Int, CaseIterable, Identifiable {
-    case foodAndDrinks
     case food
     case drinks
     case dailyLife
@@ -23,7 +22,6 @@ enum Category: Int, CaseIterable, Identifiable {
     
     var name: String {
         switch self {
-        case .foodAndDrinks: return "Food & Drinks"
         case .food: return "Food"
         case .drinks: return "Drinks"
         case .dailyLife: return "Daily Life"
@@ -36,7 +34,6 @@ enum Category: Int, CaseIterable, Identifiable {
     
     var displayName: String {
         switch self {
-        case .foodAndDrinks: return "Food\n&\nDrinks"
         case .food: return "Food"
         case .drinks: return "Drinks"
         case .dailyLife: return "Daily\nLife"
@@ -49,7 +46,6 @@ enum Category: Int, CaseIterable, Identifiable {
     
     var image: String {
         switch self {
-        case .foodAndDrinks: return "fork.knife"
         case .food: return "fork.knife"
         case .drinks: return "fork.knife"
         case .dailyLife: return "sun.haze"

@@ -7,8 +7,11 @@
 
 import SwiftUI
 
+
+
 struct CategoryView: View {
-    let category: Category
+    let title: String
+    let image: String
     
     var body: some View {
         ZStack{
@@ -18,11 +21,11 @@ struct CategoryView: View {
                 .shadow(color: .teal, radius: 10)
             
             VStack{
-                Image(systemName: category.image)
+                Image(systemName: image)
                     .foregroundColor(.white)
                     .padding(.bottom, 5)
                 
-                Text(category.displayName)
+                Text(title)
                     .foregroundColor(.white)
                     .font(.caption)
                     .multilineTextAlignment(.center)
@@ -32,5 +35,5 @@ struct CategoryView: View {
 }
 
 #Preview {
-    CategoryView(category: .foodAndDrinks)
+    CategoryView(title: "Gardens", image: "leaf")
 }
