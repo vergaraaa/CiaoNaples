@@ -23,7 +23,7 @@ struct HomeView: View {
                         .foregroundColor(Color(hue: 0.561, saturation: 0.928, brightness: 0.428))
                     
                     VStack {
-                        NavigationLink(destination: Text("Food And Drinks")){
+                        NavigationLink(destination: FoodAndDrinksView()){
                             CategoryView(title: "Food\n&\nDrinks", image: "fork.knife")
                         }
                         
