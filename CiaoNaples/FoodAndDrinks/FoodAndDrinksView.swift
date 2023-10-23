@@ -29,11 +29,9 @@ struct FoodAndDrinksView: View {
                             HStack{
                                 ForEach (viewModel.food){ food in
                                     LocationCardView(location: food)
-                                        .padding(.horizontal)
                                 }
                             }
-                        }
-                        .scrollIndicators(.hidden)
+                        }.padding()
                     }
                     
                     VStack(alignment: .leading, spacing: 10) {
@@ -47,11 +45,9 @@ struct FoodAndDrinksView: View {
                             HStack {
                                 ForEach(viewModel.drinks) { drink in
                                     LocationCardView(location: drink)
-                                        .padding(.horizontal)
                                 }
                             }
-                        }
-                        .scrollIndicators(.hidden)
+                        }.padding()
                     }
                 }
                 .padding(.vertical)
