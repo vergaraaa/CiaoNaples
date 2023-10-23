@@ -20,76 +20,81 @@ struct dailylifeView: View {
                 .ignoresSafeArea()
                 .opacity(0.2)
             
-            VStack{
-                Text("Day")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color(hue: 0.561, saturation: 0.928, brightness: 0.428))
-                
-                ScrollView(.horizontal){
+            VStack(alignment: .leading, spacing: 40){
+                VStack(alignment: .leading, spacing: 10){
+                    Text("Day")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color(hue: 0.561, saturation: 0.928, brightness: 0.428))
                     
-                    HStack{
+                    ScrollView(.horizontal){
                         
-                        ForEach(nightModel.night) { Nightlife in
-                            ZStack(alignment: .bottomLeading){
-                                Image(Nightlife.imageN)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 350, height: 250)
-                                    .cornerRadius(20)
-                                
-                                Color.black
-                                    .opacity(0.3)
-                                    .cornerRadius(20)
-                                
-                                VStack{
-                                    Text(Nightlife.nameN)
-                                        .font(.largeTitle)
-                                        .bold()
-                                        .padding()
+                        HStack{
+                            
+                            ForEach(nightModel.night) { Nightlife in
+                                ZStack(alignment: .bottomLeading){
+                                    Image(Nightlife.imageN)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 350, height: 250)
+                                        .cornerRadius(20)
+                                    
+                                    Color.black
+                                        .opacity(0.3)
+                                        .cornerRadius(20)
+                                    
+                                    VStack{
+                                        Text(Nightlife.nameN)
+                                            .font(.largeTitle)
+                                            .bold()
+                                            .padding()
+                                    }
                                 }
                             }
                         }
                     }
                     
-                    
                 }.padding()
                 
-                Text("Night")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color(hue: 0.561, saturation: 0.928, brightness: 0.428))
-                
-                ScrollView(.horizontal){
-                    
-                    HStack{
+                    VStack(alignment: .leading, spacing: 10){
+                        Text("Night")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color(hue: 0.561, saturation: 0.928, brightness: 0.428))
                         
-                        ForEach(dailyModel.daily) { places in
-                            ZStack(alignment: .bottomLeading){
-                                Image(places.imageD)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 350, height: 250)
-                                    .cornerRadius(20)
+                        ScrollView(.horizontal){
+                            
+                            HStack{
                                 
-                                Color.black
-                                    .opacity(0.3)
-                                    .cornerRadius(20)
-                                
-                                VStack{
-                                    Text(places.nameD)
-                                        .font(.largeTitle)
-                                        .bold()
-                                        .padding()
+                                ForEach(dailyModel.daily) { places in
+                                    ZStack(alignment: .bottomLeading){
+                                        Image(places.imageD)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 350, height: 250)
+                                            .cornerRadius(20)
+                                        
+                                        Color.black
+                                            .opacity(0.3)
+                                            .cornerRadius(20)
+                                        
+                                        VStack{
+                                            Text(places.nameD)
+                                                .font(.largeTitle)
+                                                .bold()
+                                                .padding()
+                                        }
+                                    }
                                 }
                             }
                         }
-                    }
-                }.padding()
+                    }.padding()
+                }
             }
         }
     }
-}
+
+
 
 #Preview {
     dailylifeView()

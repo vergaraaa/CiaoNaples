@@ -18,43 +18,51 @@ struct viewpointsView: View {
                 .ignoresSafeArea()
                 .opacity(0.2)
             
-            VStack{
-                
-                ScrollView{
+            VStack(alignment: .leading, spacing: 40) {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Viewpoints")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color(hue: 0.561, saturation: 0.928, brightness: 0.428))
+                        .padding([.top, .leading, .trailing])
                     
-                    VStack{
-                        ForEach(viewpointsModel.viewpoints){ viewpoint in
-                            ZStack(alignment: .bottomLeading){
-                                Image(viewpoint.imagesV)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 350, height: 450)
-                                    .cornerRadius(20)
-                                
-                                Color.black
-                                    .opacity(0.3)
-                                    .cornerRadius(20)
-                                
-                                VStack(alignment: .leading){
-                                    Text(viewpoint.nameV)
-                                        .font(.largeTitle)
+                    ScrollView{
+                        
+                        VStack{
+                            ForEach(viewpointsModel.viewpoints){ viewpoint in
+                                ZStack(alignment: .bottomLeading){
+                                    Image(viewpoint.imagesV)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 350, height: 450)
+                                        .cornerRadius(20)
+                                    
+                                    Color.black
+                                        .opacity(0.3)
+                                        .cornerRadius(20)
+                                    
+                                    VStack(alignment: .leading){
+                                        Text(viewpoint.nameV)
+                                            .font(.largeTitle)
                                             .bold()
-                                    Text(viewpoint.zoneV)
-                                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                                        .bold()
-                                        .italic()
-                                    Text(viewpoint.descriptionN)
-                                        .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
-                                        .italic()
-                                } .padding()
+                                        Text(viewpoint.zoneV)
+                                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                            .bold()
+                                            .italic()
+                                        Text(viewpoint.descriptionN)
+                                            .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                                            .italic()
+                                    } .padding()
+                                }
                             }
                         }
-                    }
-                }.padding()
+                    }.padding()
+                }
             }
         }
     }
 }
+
 
 #Preview {
     viewpointsView()

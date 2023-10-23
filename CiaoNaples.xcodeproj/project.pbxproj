@@ -12,6 +12,9 @@
 		BB4BBFC22AE5A9B1000B5DAD /* dailylifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBD2AE5A9B1000B5DAD /* dailylifeView.swift */; };
 		BB4BBFC32AE5A9B1000B5DAD /* dailyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBE2AE5A9B1000B5DAD /* dailyStruct.swift */; };
 		BB4BBFC42AE5A9B1000B5DAD /* dailyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */; };
+		BB5901742AE6C08B00352399 /* viewpointsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901712AE6C08B00352399 /* viewpointsStruct.swift */; };
+		BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901722AE6C08B00352399 /* viewpointsClass.swift */; };
+		BB5901762AE6C08B00352399 /* viewpointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901732AE6C08B00352399 /* viewpointsView.swift */; };
 		BB668D462AE2A9EB00480B4B /* drinkStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D412AE2A9EB00480B4B /* drinkStruct.swift */; };
 		BB668D472AE2A9EB00480B4B /* foodClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D422AE2A9EB00480B4B /* foodClass.swift */; };
 		BB668D482AE2A9EB00480B4B /* drinkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D432AE2A9EB00480B4B /* drinkClass.swift */; };
@@ -37,6 +40,9 @@
 		BB4BBFBD2AE5A9B1000B5DAD /* dailylifeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dailylifeView.swift; sourceTree = "<group>"; };
 		BB4BBFBE2AE5A9B1000B5DAD /* dailyStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dailyStruct.swift; sourceTree = "<group>"; };
 		BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dailyClass.swift; sourceTree = "<group>"; };
+		BB5901712AE6C08B00352399 /* viewpointsStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewpointsStruct.swift; sourceTree = "<group>"; };
+		BB5901722AE6C08B00352399 /* viewpointsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewpointsClass.swift; sourceTree = "<group>"; };
+		BB5901732AE6C08B00352399 /* viewpointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewpointsView.swift; sourceTree = "<group>"; };
 		BB668D412AE2A9EB00480B4B /* drinkStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkStruct.swift; sourceTree = "<group>"; };
 		BB668D422AE2A9EB00480B4B /* foodClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodClass.swift; sourceTree = "<group>"; };
 		BB668D432AE2A9EB00480B4B /* drinkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkClass.swift; sourceTree = "<group>"; };
@@ -78,6 +84,16 @@
 				BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */,
 			);
 			path = "Daily life";
+			sourceTree = "<group>";
+		};
+		BB5901702AE6C08B00352399 /* ViewPoints */ = {
+			isa = PBXGroup;
+			children = (
+				BB5901712AE6C08B00352399 /* viewpointsStruct.swift */,
+				BB5901722AE6C08B00352399 /* viewpointsClass.swift */,
+				BB5901732AE6C08B00352399 /* viewpointsView.swift */,
+			);
+			path = ViewPoints;
 			sourceTree = "<group>";
 		};
 		BB668D402AE2A9EB00480B4B /* FoodAndDrinks */ = {
@@ -130,6 +146,7 @@
 		F05C5A112ADED8BF006DCF61 /* CiaoNaples */ = {
 			isa = PBXGroup;
 			children = (
+				BB5901702AE6C08B00352399 /* ViewPoints */,
 				BB4BBFBA2AE5A9B1000B5DAD /* Daily life */,
 				BB668D402AE2A9EB00480B4B /* FoodAndDrinks */,
 				F01995152AE16856006F6091 /* Components */,
@@ -242,6 +259,8 @@
 				BB668D492AE2A9EB00480B4B /* foodStruct.swift in Sources */,
 				F01FDAA12AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift in Sources */,
 				BB668D472AE2A9EB00480B4B /* foodClass.swift in Sources */,
+				BB5901742AE6C08B00352399 /* viewpointsStruct.swift in Sources */,
+				BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */,
 				F01995172AE1686D006F6091 /* TestComponent.swift in Sources */,
 				BB4BBFC22AE5A9B1000B5DAD /* dailylifeView.swift in Sources */,
 				F01FDAA32AE2AF2B004B4DB6 /* LocationCardView.swift in Sources */,
@@ -258,6 +277,7 @@
 				BB4BBFC42AE5A9B1000B5DAD /* dailyClass.swift in Sources */,
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,
 				F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */,
+				BB5901762AE6C08B00352399 /* viewpointsView.swift in Sources */,
 				BB668D482AE2A9EB00480B4B /* drinkClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
