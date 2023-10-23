@@ -18,7 +18,7 @@ struct dailylifeView: View {
         ZStack{
             Color.teal
                 .ignoresSafeArea()
-                .opacity(0.3)
+                .opacity(0.2)
             
             VStack{
                 Text("Day")

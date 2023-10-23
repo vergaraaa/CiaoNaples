@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB4BBFC02AE5A9B1000B5DAD /* nightClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBB2AE5A9B1000B5DAD /* nightClass.swift */; };
+		BB4BBFC12AE5A9B1000B5DAD /* nightStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBC2AE5A9B1000B5DAD /* nightStruct.swift */; };
+		BB4BBFC22AE5A9B1000B5DAD /* dailylifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBD2AE5A9B1000B5DAD /* dailylifeView.swift */; };
+		BB4BBFC32AE5A9B1000B5DAD /* dailyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBE2AE5A9B1000B5DAD /* dailyStruct.swift */; };
+		BB4BBFC42AE5A9B1000B5DAD /* dailyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */; };
 		BB668D462AE2A9EB00480B4B /* drinkStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D412AE2A9EB00480B4B /* drinkStruct.swift */; };
 		BB668D472AE2A9EB00480B4B /* foodClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D422AE2A9EB00480B4B /* foodClass.swift */; };
 		BB668D482AE2A9EB00480B4B /* drinkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D432AE2A9EB00480B4B /* drinkClass.swift */; };
@@ -27,6 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB4BBFBB2AE5A9B1000B5DAD /* nightClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nightClass.swift; sourceTree = "<group>"; };
+		BB4BBFBC2AE5A9B1000B5DAD /* nightStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nightStruct.swift; sourceTree = "<group>"; };
+		BB4BBFBD2AE5A9B1000B5DAD /* dailylifeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dailylifeView.swift; sourceTree = "<group>"; };
+		BB4BBFBE2AE5A9B1000B5DAD /* dailyStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dailyStruct.swift; sourceTree = "<group>"; };
+		BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dailyClass.swift; sourceTree = "<group>"; };
 		BB668D412AE2A9EB00480B4B /* drinkStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkStruct.swift; sourceTree = "<group>"; };
 		BB668D422AE2A9EB00480B4B /* foodClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodClass.swift; sourceTree = "<group>"; };
 		BB668D432AE2A9EB00480B4B /* drinkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkClass.swift; sourceTree = "<group>"; };
@@ -58,6 +68,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB4BBFBA2AE5A9B1000B5DAD /* Daily life */ = {
+			isa = PBXGroup;
+			children = (
+				BB4BBFBB2AE5A9B1000B5DAD /* nightClass.swift */,
+				BB4BBFBC2AE5A9B1000B5DAD /* nightStruct.swift */,
+				BB4BBFBD2AE5A9B1000B5DAD /* dailylifeView.swift */,
+				BB4BBFBE2AE5A9B1000B5DAD /* dailyStruct.swift */,
+				BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */,
+			);
+			path = "Daily life";
+			sourceTree = "<group>";
+		};
 		BB668D402AE2A9EB00480B4B /* FoodAndDrinks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +130,7 @@
 		F05C5A112ADED8BF006DCF61 /* CiaoNaples */ = {
 			isa = PBXGroup;
 			children = (
+				BB4BBFBA2AE5A9B1000B5DAD /* Daily life */,
 				BB668D402AE2A9EB00480B4B /* FoodAndDrinks */,
 				F01995152AE16856006F6091 /* Components */,
 				F0A4AA6E2AE16E1900A83D01 /* Favorites */,
@@ -220,14 +243,19 @@
 				F01FDAA12AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift in Sources */,
 				BB668D472AE2A9EB00480B4B /* foodClass.swift in Sources */,
 				F01995172AE1686D006F6091 /* TestComponent.swift in Sources */,
+				BB4BBFC22AE5A9B1000B5DAD /* dailylifeView.swift in Sources */,
 				F01FDAA32AE2AF2B004B4DB6 /* LocationCardView.swift in Sources */,
 				BB668D4A2AE2A9EB00480B4B /* FoodAndDrinksView.swift in Sources */,
+				BB4BBFC12AE5A9B1000B5DAD /* nightStruct.swift in Sources */,
 				BB668D462AE2A9EB00480B4B /* drinkStruct.swift in Sources */,
 				F019951B2AE169F2006F6091 /* CategoryView.swift in Sources */,
 				F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */,
+				BB4BBFC32AE5A9B1000B5DAD /* dailyStruct.swift in Sources */,
 				F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */,
 				F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */,
+				BB4BBFC02AE5A9B1000B5DAD /* nightClass.swift in Sources */,
 				F01995192AE16976006F6091 /* HomeView.swift in Sources */,
+				BB4BBFC42AE5A9B1000B5DAD /* dailyClass.swift in Sources */,
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,
 				F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */,
 				BB668D482AE2A9EB00480B4B /* drinkClass.swift in Sources */,
