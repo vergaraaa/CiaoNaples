@@ -24,6 +24,7 @@ struct LocationCardView: View {
                     .bold()
                     .foregroundStyle(.white)
                     .padding()
+                    .fontDesign(.rounded)
                     .frame(width: 350, alignment: .leading)
             }
             .frame(width: 350)
