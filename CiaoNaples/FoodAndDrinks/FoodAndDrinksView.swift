@@ -13,8 +13,8 @@ struct FoodAndDrinksView: View {
     var viewModel = FoodAndDrinksViewModel()
     
     init() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color(HomeCategory.foodAndDrinks.color))
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor(HomeCategory.foodAndDrinks.color).withAlphaComponent(0.2)
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color(Category.foodAndDrinks.color))
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor(Category.foodAndDrinks.color).withAlphaComponent(0.2)
         UIPageControl.appearance().backgroundStyle = .prominent
     }
     
@@ -22,7 +22,7 @@ struct FoodAndDrinksView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
                 VStack(alignment: .leading, spacing: -40) {
-                    Text("\(Category.food.name)")
+                    Text("Food")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .fontDesign(.rounded)
@@ -38,7 +38,7 @@ struct FoodAndDrinksView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: -40) {
-                    Text("\(Category.drinks.name)")
+                    Text("Drinks")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .fontDesign(.rounded)

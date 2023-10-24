@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct CategoryView: View {
-    let category: HomeCategory
+    let category: Category
     
     var body: some View {
         VStack(spacing: 10) {
@@ -30,5 +30,5 @@ struct CategoryView: View {
 }
 
 #Preview {
-    CategoryView(category: HomeCategory.foodAndDrinks)
+    CategoryView(category: Category.foodAndDrinks)
 }

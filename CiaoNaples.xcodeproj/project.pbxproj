@@ -25,7 +25,6 @@
 		F019951B2AE169F2006F6091 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019951A2AE169F2006F6091 /* CategoryView.swift */; };
 		F01FDAA12AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01FDAA02AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift */; };
 		F01FDAA32AE2AF2B004B4DB6 /* LocationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01FDAA22AE2AF2B004B4DB6 /* LocationCardView.swift */; };
-		F0541A972AE80F0B0017AC5E /* HomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0541A962AE80F0B0017AC5E /* HomeCategory.swift */; };
 		F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C5A122ADED8BF006DCF61 /* CiaoNaplesApp.swift */; };
 		F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C5A142ADED8BF006DCF61 /* ContentView.swift */; };
 		F05C5A172ADED8C0006DCF61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05C5A162ADED8C0006DCF61 /* Assets.xcassets */; };
@@ -54,7 +53,6 @@
 		F019951A2AE169F2006F6091 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		F01FDAA02AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAndDrinksViewModel.swift; sourceTree = "<group>"; };
 		F01FDAA22AE2AF2B004B4DB6 /* LocationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCardView.swift; sourceTree = "<group>"; };
-		F0541A962AE80F0B0017AC5E /* HomeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategory.swift; sourceTree = "<group>"; };
 		F05C5A0F2ADED8BF006DCF61 /* CiaoNaples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiaoNaples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05C5A122ADED8BF006DCF61 /* CiaoNaplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiaoNaplesApp.swift; sourceTree = "<group>"; };
 		F05C5A142ADED8BF006DCF61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 			children = (
 				F0FE8F8F2AE04DE7007EEC49 /* Location.swift */,
 				F0FE8F912AE04EA3007EEC49 /* Category.swift */,
-				F0541A962AE80F0B0017AC5E /* HomeCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,7 +276,6 @@
 				F01995192AE16976006F6091 /* HomeView.swift in Sources */,
 				BB4BBFC42AE5A9B1000B5DAD /* dailyClass.swift in Sources */,
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,
-				F0541A972AE80F0B0017AC5E /* HomeCategory.swift in Sources */,
 				F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */,
 				BB5901762AE6C08B00352399 /* viewpointsView.swift in Sources */,
 				BB668D482AE2A9EB00480B4B /* drinkClass.swift in Sources */,
