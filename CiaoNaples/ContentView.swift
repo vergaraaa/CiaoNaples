@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    let appearance: UITabBarAppearance = UITabBarAppearance()
+    init() {
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+    }
+    
     var body: some View {
         TabView {
             HomeView()

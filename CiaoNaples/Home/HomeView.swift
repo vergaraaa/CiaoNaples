@@ -8,64 +8,48 @@
 import SwiftUI
 
 struct HomeView: View {
+    let gridSpacing = 20.0
+    
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.teal
-                    .ignoresSafeArea()
-                    .opacity(0.2)
+            VStack {
+                Spacer()
                 
-                VStack {
-                    Text("What to do today?")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding(.bottom, 50.0)
-                        .foregroundColor(Color(hue: 0.561, saturation: 0.928, brightness: 0.428))
-                    
-                    VStack {
-                        NavigationLink(destination: FoodAndDrinksView()){
-                            CategoryView(title: "Food\n&\nDrinks", image: "fork.knife")
+                Text("Ciao Naples!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .fontDesign(.rounded)
+                    .padding(.bottom, 50)
+                
+                LazyVGrid(
+                    columns: [
+                        GridItem(.fixed(150), spacing: gridSpacing),
+                        GridItem(.fixed(150), spacing: gridSpacing)
+                    ], spacing: gridSpacing) {
+                        NavigationLink(destination: FoodAndDrinksView()) {
+                            CategoryView(category: .foodAndDrinks)
                         }
                         
-                        HStack{
-                            VStack(spacing: 50) {
-                                NavigationLink (destination: Text("Folkloric Places")){
-                                    CategoryView(title: "Folkloric\nPlaces", image: "theatermasks")
-                                }
-                                
-                                
-                                NavigationLink (destination: Text("Viewpoints")){
-                                    CategoryView(title: "Viewpoints", image: "binoculars")
-                                }
-                            }
-                            
-                            Spacer()
-                            
-                            Image("FirstView")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 150, height: 150, alignment: .center)
-                            
-                            Spacer()
-                            
-                            VStack(spacing: 50) {
-                                NavigationLink (destination: Text("Daily Life")){
-                                    CategoryView(title: "Daily\nLife", image: "sun.haze")
-                                }
-                                
-                                NavigationLink (destination: Text("Museums")){
-                                    CategoryView(title: "Museums", image: "building.columns")
-                                }
-                            }
+                        NavigationLink(destination: dailylifeView()) {
+                            CategoryView(category: .dailyLife)
                         }
-                        .padding(.horizontal)
-
                         
-                        NavigationLink (destination: Text("Gardens")){
-                            CategoryView(title: "Gardens", image: "leaf")
+                        NavigationLink(destination: Text("Test")) {
+                            CategoryView(category: .viewpoints)
+                        }
+                        
+                        NavigationLink(destination: Text("Test")) {
+                            CategoryView(category: .folkloricPlaces)
                         }
                     }
-                }
+                
+                Spacer()
+                
+                Image("vesuvius")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 50)
+                    .padding(.bottom, 35)
             }
         }
     }

@@ -10,30 +10,25 @@ import SwiftUI
 
 
 struct CategoryView: View {
-    let title: String
-    let image: String
+    let category: HomeCategory
     
     var body: some View {
-        ZStack{
-            Circle()
-                .foregroundColor(.teal)
-                .frame(width: 90, height: 90, alignment: .center)
-                .shadow(color: .teal, radius: 10)
+        VStack(spacing: 10) {
+            Image(systemName: category.image)
             
-            VStack{
-                Image(systemName: image)
-                    .foregroundColor(.white)
-                    .padding(.bottom, 5)
-                
-                Text(title)
-                    .foregroundColor(.white)
-                    .font(.caption)
-                    .multilineTextAlignment(.center)
-            }
+            Text(category.name)
+                .fontDesign(.rounded)
+                .multilineTextAlignment(.center)
         }
+        .frame(width: 150, height: 150)
+        .background(category.color)
+        .clipShape(RoundedRectangle(cornerRadius: 40))
+        .foregroundStyle(.white)
+        .fontWeight(.semibold)
+        .shadow(radius: 5)
     }
 }
 
 #Preview {
-    CategoryView(title: "Gardens", image: "leaf")
+    CategoryView(category: HomeCategory.foodAndDrinks)
 }
