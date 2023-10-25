@@ -8,7 +8,7 @@
 import Foundation
 
 struct Location: Identifiable, Hashable {
-    let id = UUID()
+    let id = UUID().uuidString
     let name: String
     let coverImage: String
     let images: [String]
@@ -19,6 +19,11 @@ struct Location: Identifiable, Hashable {
     let longitude: Double
     let category: Category
     var tag: String?
+//    let topChoice: Bool
+//    let publicTransport: Bool
+//    let ticketNeeded: Bool?
+//    let cheapChoice: Bool?
+    
 }
 
 extension Location {

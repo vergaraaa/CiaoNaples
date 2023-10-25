@@ -31,6 +31,7 @@
 		F05C5A1A2ADED8C0006DCF61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05C5A192ADED8C0006DCF61 /* Preview Assets.xcassets */; };
 		F05E793B2AE838D500582A7A /* DailyLifeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E793A2AE838D500582A7A /* DailyLifeViewModel.swift */; };
 		F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */; };
+		F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE68472AE8FCC600B87648 /* DetailView.swift */; };
 		F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F8F2AE04DE7007EEC49 /* Location.swift */; };
 		F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F912AE04EA3007EEC49 /* Category.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		F05C5A192ADED8C0006DCF61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F05E793A2AE838D500582A7A /* DailyLifeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLifeViewModel.swift; sourceTree = "<group>"; };
 		F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		F0BE68472AE8FCC600B87648 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F0FE8F8F2AE04DE7007EEC49 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F0FE8F912AE04EA3007EEC49 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,13 +151,14 @@
 		F05C5A112ADED8BF006DCF61 /* CiaoNaples */ = {
 			isa = PBXGroup;
 			children = (
-				BB5901702AE6C08B00352399 /* ViewPoints */,
-				BB4BBFBA2AE5A9B1000B5DAD /* Daily life */,
-				BB668D402AE2A9EB00480B4B /* FoodAndDrinks */,
 				F01995152AE16856006F6091 /* Components */,
+				BB4BBFBA2AE5A9B1000B5DAD /* Daily life */,
+				F0BE68462AE8FCB800B87648 /* Detail */,
 				F0A4AA6E2AE16E1900A83D01 /* Favorites */,
+				BB668D402AE2A9EB00480B4B /* FoodAndDrinks */,
 				F01995132AE164DA006F6091 /* Home */,
 				F0FE8F4A2AE00655007EEC49 /* Model */,
+				BB5901702AE6C08B00352399 /* ViewPoints */,
 				F05C5A122ADED8BF006DCF61 /* CiaoNaplesApp.swift */,
 				F05C5A142ADED8BF006DCF61 /* ContentView.swift */,
 				F05C5A162ADED8C0006DCF61 /* Assets.xcassets */,
@@ -178,6 +181,14 @@
 				F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F0BE68462AE8FCB800B87648 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F0BE68472AE8FCC600B87648 /* DetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		F0FE8F4A2AE00655007EEC49 /* Model */ = {
@@ -267,6 +278,7 @@
 				F01995172AE1686D006F6091 /* TestComponent.swift in Sources */,
 				BB4BBFC22AE5A9B1000B5DAD /* DailyLifeView.swift in Sources */,
 				F01FDAA32AE2AF2B004B4DB6 /* LocationCardView.swift in Sources */,
+				F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */,
 				BB668D4A2AE2A9EB00480B4B /* FoodAndDrinksView.swift in Sources */,
 				BB4BBFC12AE5A9B1000B5DAD /* nightStruct.swift in Sources */,
 				F05E793B2AE838D500582A7A /* DailyLifeViewModel.swift in Sources */,
@@ -416,6 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CiaoNaples/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Y3SF6KR8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -444,6 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CiaoNaples/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Y3SF6KR8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
