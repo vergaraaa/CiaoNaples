@@ -9,10 +9,10 @@ import Foundation
 
 class FoodAndDrinksViewModel {
     var food: [Location] {
-        return Location.locations.filter({ $0.category == .food })
+        return Location.locations.filter({ $0.category == .foodAndDrinks && $0.tag == "Food" })
     }
     
     var drinks: [Location] {
-        return Location.locations.filter({ $0.category == .drinks })
+        return Location.locations.filter({ $0.category == .foodAndDrinks && $0.tag == "Drinks" })
     }
 }
