@@ -31,6 +31,9 @@
 		F05C5A1A2ADED8C0006DCF61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05C5A192ADED8C0006DCF61 /* Preview Assets.xcassets */; };
 		F05E793B2AE838D500582A7A /* DailyLifeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E793A2AE838D500582A7A /* DailyLifeViewModel.swift */; };
 		F0858B282AE940D300BE9193 /* ViewpointsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B272AE940D300BE9193 /* ViewpointsViewModel.swift */; };
+		F0858B2B2AE947EE00BE9193 /* FolkloricPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2A2AE947EE00BE9193 /* FolkloricPlacesView.swift */; };
+		F0858B2D2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */; };
+		F0858B302AE94ACC00BE9193 /* AdaptativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */; };
 		F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */; };
 		F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE68472AE8FCC600B87648 /* DetailView.swift */; };
 		F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F8F2AE04DE7007EEC49 /* Location.swift */; };
@@ -63,6 +66,9 @@
 		F05C5A192ADED8C0006DCF61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F05E793A2AE838D500582A7A /* DailyLifeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLifeViewModel.swift; sourceTree = "<group>"; };
 		F0858B272AE940D300BE9193 /* ViewpointsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewpointsViewModel.swift; sourceTree = "<group>"; };
+		F0858B2A2AE947EE00BE9193 /* FolkloricPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkloricPlacesView.swift; sourceTree = "<group>"; };
+		F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkloricPlacesViewModel.swift; sourceTree = "<group>"; };
+		F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptativeView.swift; sourceTree = "<group>"; };
 		F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		F0BE68472AE8FCC600B87648 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F0FE8F8F2AE04DE7007EEC49 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 				F0A4AA6E2AE16E1900A83D01 /* Favorites */,
 				F0858B292AE947AA00BE9193 /* FolkloricPlaces */,
 				BB668D402AE2A9EB00480B4B /* FoodAndDrinks */,
+				F0858B2E2AE94ABC00BE9193 /* Helpers */,
 				F01995132AE164DA006F6091 /* Home */,
 				F0FE8F4A2AE00655007EEC49 /* Model */,
 				BB5901702AE6C08B00352399 /* ViewPoints */,
@@ -182,8 +189,18 @@
 		F0858B292AE947AA00BE9193 /* FolkloricPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				F0858B2A2AE947EE00BE9193 /* FolkloricPlacesView.swift */,
+				F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */,
 			);
 			path = FolkloricPlaces;
+			sourceTree = "<group>";
+		};
+		F0858B2E2AE94ABC00BE9193 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F0A4AA6E2AE16E1900A83D01 /* Favorites */ = {
@@ -286,6 +303,7 @@
 				BB668D472AE2A9EB00480B4B /* foodClass.swift in Sources */,
 				BB5901742AE6C08B00352399 /* viewpointsStruct.swift in Sources */,
 				BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */,
+				F0858B2B2AE947EE00BE9193 /* FolkloricPlacesView.swift in Sources */,
 				F01995172AE1686D006F6091 /* TestComponent.swift in Sources */,
 				F0858B282AE940D300BE9193 /* ViewpointsViewModel.swift in Sources */,
 				BB4BBFC22AE5A9B1000B5DAD /* DailyLifeView.swift in Sources */,
@@ -297,7 +315,9 @@
 				BB668D462AE2A9EB00480B4B /* drinkStruct.swift in Sources */,
 				F019951B2AE169F2006F6091 /* CategoryView.swift in Sources */,
 				F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */,
+				F0858B302AE94ACC00BE9193 /* AdaptativeView.swift in Sources */,
 				BB4BBFC32AE5A9B1000B5DAD /* dailyStruct.swift in Sources */,
+				F0858B2D2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift in Sources */,
 				F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */,
 				F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */,
 				BB4BBFC02AE5A9B1000B5DAD /* nightClass.swift in Sources */,

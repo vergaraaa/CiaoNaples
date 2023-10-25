@@ -25,7 +25,7 @@ struct CategoryView: View {
         .clipShape(RoundedRectangle(cornerRadius: 40))
         .foregroundStyle(.white)
         .fontWeight(.semibold)
-        .shadow(radius: 5)
+        .shadow(color: .gray, radius: 5)
     }
 }
 

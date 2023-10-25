@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     let gridSpacing = 20.0
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationStack {
@@ -38,14 +39,14 @@ struct HomeView: View {
                             CategoryView(category: .viewpoints)
                         }
                         
-                        NavigationLink(destination: Text("Test")) {
+                        NavigationLink(destination: FolkloricPlacesView()) {
                             CategoryView(category: .folkloricPlaces)
                         }
                     }
                 
                 Spacer()
                 
-                Image("vesuvius")
+                Image(colorScheme == .light ?  "vesuvius_black" : "vesuvius_white")
                     .resizable()
                     .scaledToFill()
                     .frame(height: 50)
