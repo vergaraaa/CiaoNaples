@@ -30,7 +30,7 @@ struct LocationCardView: View {
             .frame(width: 350)
             .background(
                 Color.gray
-                    .opacity(0.3)
+                    .opacity(0.5)
                     .frame(width: 350)
                     .clipShape(.rect(
                         topLeadingRadius: 0,

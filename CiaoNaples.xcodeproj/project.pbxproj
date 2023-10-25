@@ -15,10 +15,6 @@
 		BB5901742AE6C08B00352399 /* viewpointsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901712AE6C08B00352399 /* viewpointsStruct.swift */; };
 		BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901722AE6C08B00352399 /* viewpointsClass.swift */; };
 		BB5901762AE6C08B00352399 /* ViewpointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901732AE6C08B00352399 /* ViewpointsView.swift */; };
-		BB668D462AE2A9EB00480B4B /* drinkStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D412AE2A9EB00480B4B /* drinkStruct.swift */; };
-		BB668D472AE2A9EB00480B4B /* foodClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D422AE2A9EB00480B4B /* foodClass.swift */; };
-		BB668D482AE2A9EB00480B4B /* drinkClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D432AE2A9EB00480B4B /* drinkClass.swift */; };
-		BB668D492AE2A9EB00480B4B /* foodStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D442AE2A9EB00480B4B /* foodStruct.swift */; };
 		BB668D4A2AE2A9EB00480B4B /* FoodAndDrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D452AE2A9EB00480B4B /* FoodAndDrinksView.swift */; };
 		F01995172AE1686D006F6091 /* TestComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01995162AE1686D006F6091 /* TestComponent.swift */; };
 		F01995192AE16976006F6091 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01995182AE16976006F6091 /* HomeView.swift */; };
@@ -49,10 +45,6 @@
 		BB5901712AE6C08B00352399 /* viewpointsStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewpointsStruct.swift; sourceTree = "<group>"; };
 		BB5901722AE6C08B00352399 /* viewpointsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewpointsClass.swift; sourceTree = "<group>"; };
 		BB5901732AE6C08B00352399 /* ViewpointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewpointsView.swift; sourceTree = "<group>"; };
-		BB668D412AE2A9EB00480B4B /* drinkStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkStruct.swift; sourceTree = "<group>"; };
-		BB668D422AE2A9EB00480B4B /* foodClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodClass.swift; sourceTree = "<group>"; };
-		BB668D432AE2A9EB00480B4B /* drinkClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drinkClass.swift; sourceTree = "<group>"; };
-		BB668D442AE2A9EB00480B4B /* foodStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = foodStruct.swift; sourceTree = "<group>"; };
 		BB668D452AE2A9EB00480B4B /* FoodAndDrinksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrinksView.swift; sourceTree = "<group>"; };
 		F01995162AE1686D006F6091 /* TestComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestComponent.swift; sourceTree = "<group>"; };
 		F01995182AE16976006F6091 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -113,10 +105,6 @@
 		BB668D402AE2A9EB00480B4B /* FoodAndDrinks */ = {
 			isa = PBXGroup;
 			children = (
-				BB668D412AE2A9EB00480B4B /* drinkStruct.swift */,
-				BB668D422AE2A9EB00480B4B /* foodClass.swift */,
-				BB668D432AE2A9EB00480B4B /* drinkClass.swift */,
-				BB668D442AE2A9EB00480B4B /* foodStruct.swift */,
 				BB668D452AE2A9EB00480B4B /* FoodAndDrinksView.swift */,
 				F01FDAA02AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift */,
 			);
@@ -298,9 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB668D492AE2A9EB00480B4B /* foodStruct.swift in Sources */,
 				F01FDAA12AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift in Sources */,
-				BB668D472AE2A9EB00480B4B /* foodClass.swift in Sources */,
 				BB5901742AE6C08B00352399 /* viewpointsStruct.swift in Sources */,
 				BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */,
 				F0858B2B2AE947EE00BE9193 /* FolkloricPlacesView.swift in Sources */,
@@ -312,7 +298,6 @@
 				BB668D4A2AE2A9EB00480B4B /* FoodAndDrinksView.swift in Sources */,
 				BB4BBFC12AE5A9B1000B5DAD /* nightStruct.swift in Sources */,
 				F05E793B2AE838D500582A7A /* DailyLifeViewModel.swift in Sources */,
-				BB668D462AE2A9EB00480B4B /* drinkStruct.swift in Sources */,
 				F019951B2AE169F2006F6091 /* CategoryView.swift in Sources */,
 				F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */,
 				F0858B302AE94ACC00BE9193 /* AdaptativeView.swift in Sources */,
@@ -326,7 +311,6 @@
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,
 				F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */,
 				BB5901762AE6C08B00352399 /* ViewpointsView.swift in Sources */,
-				BB668D482AE2A9EB00480B4B /* drinkClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
