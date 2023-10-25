@@ -87,6 +87,7 @@ struct FoodAndDrinksView: View {
                 }
             }
         }
+        .animation(.spring, value: selectedLocation)
         .navigationBarBackButtonHidden(showDetail ? true : false)
     }
 }

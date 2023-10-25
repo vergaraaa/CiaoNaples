@@ -34,7 +34,7 @@ struct HomeView: View {
                             CategoryView(category: .dailyLife)
                         }
                         
-                        NavigationLink(destination: Text("Test")) {
+                        NavigationLink(destination: ViewpointsView()) {
                             CategoryView(category: .viewpoints)
                         }
                         

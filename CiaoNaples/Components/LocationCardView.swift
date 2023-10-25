@@ -33,11 +33,11 @@ struct LocationCardView: View {
                     .opacity(0.3)
                     .frame(width: 350)
                     .clipShape(.rect(
-                            topLeadingRadius: 0,
-                            bottomLeadingRadius: 20,
-                            bottomTrailingRadius: 20,
-                            topTrailingRadius: 0
-                        )
+                        topLeadingRadius: 0,
+                        bottomLeadingRadius: 20,
+                        bottomTrailingRadius: 20,
+                        topTrailingRadius: 0
+                    )
                     )
                     .blur(radius: 1)
             )
