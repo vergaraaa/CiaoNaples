@@ -18,30 +18,64 @@ struct dailylifeView: View {
     @State var animateContent: Bool = false
     @State var scrollOffset: CGFloat = 0
     
-    var viewModel = DailyLifeViewModel()
-
+    @StateObject var viewModel = DailyLifeViewModel()
+    
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 0) {
-                ForEach(viewModel.day) { day in
-                    Button {
-                        withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
-                            currentLocation = day
-                            showDetailPage = true
+                Picker("", selection: $viewModel.picker) {
+                    Text("Day").tag("Day")
+                    
+                    Text("Night").tag("Night")
+                }
+                .padding()
+                .pickerStyle(.segmented)
+                .opacity(showDetailPage ? 0 : 1)
+                
+                
+                if(viewModel.picker == "Day") {
+                    ForEach(viewModel.day) { day in
+                        Button {
+                            withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
+                                currentLocation = day
+                                showDetailPage = true
+                            }
+                        } label: {
+                            LocationCardView(
+                                location: day,
+                                currentLocation: currentLocation,
+                                showDetailPage: showDetailPage,
+                                animateView: animateView,
+                                animation: animation
+                            )
+                            .scaleEffect(currentLocation?.id == day.id && showDetailPage ? 1 : 0.93)
                         }
-                    } label: {
-                        LocationCardView(
-                            location: day,
-                            currentLocation: currentLocation,
-                            showDetailPage: showDetailPage,
-                            animateView: animateView,
-                            animation: animation
-                        )
-                        .scaleEffect(currentLocation?.id == day.id && showDetailPage ? 1 : 0.93)
+                        .buttonStyle(ScaledButtonStyle())
+                        .opacity(showDetailPage ? (currentLocation?.id == day.id ? 1 : 0) : 1)
                     }
-                    .buttonStyle(ScaledButtonStyle())
-                    .opacity(showDetailPage ? (currentLocation?.id == day.id ? 1 : 0) : 1)
+                }
+                else {
+                    ForEach(viewModel.night) { night in
+                        Button {
+                            withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
+                                currentLocation = night
+                                showDetailPage = true
+                            }
+                        } label: {
+                            LocationCardView(
+                                location: night,
+                                currentLocation: currentLocation,
+                                showDetailPage: showDetailPage,
+                                animateView: animateView,
+                                animation: animation
+                            )
+                            .scaleEffect(currentLocation?.id == night.id && showDetailPage ? 1 : 0.93)
+                        }
+                        .buttonStyle(ScaledButtonStyle())
+                        .opacity(showDetailPage ? (currentLocation?.id == night.id ? 1 : 0) : 1)
+                    }
+                    
                 }
             }
             .padding(.vertical)

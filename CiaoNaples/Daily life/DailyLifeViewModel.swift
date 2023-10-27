@@ -7,7 +7,9 @@
 
 import Foundation
 
-class DailyLifeViewModel {
+class DailyLifeViewModel: ObservableObject {
+    @Published var picker = "Day"
+    
     var day: [Location] {
         return Location.locations.filter({ $0.category == .dailyLife && $0.tag == "Day" })
     }
