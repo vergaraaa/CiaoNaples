@@ -26,6 +26,7 @@ struct LocationCardView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(width: size.width, height: size.height)
+                        
                 }
                 .frame(height: 400)
                 
@@ -44,6 +45,7 @@ struct LocationCardView: View {
                 .padding()
             }
         }
+        .clipShape(RoundedRectangle(cornerRadius: 25))
         .matchedGeometryEffect(id: location.id, in: animation, anchor: .leading)
     }
 }
