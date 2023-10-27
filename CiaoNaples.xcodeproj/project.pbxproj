@@ -16,7 +16,6 @@
 		BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901722AE6C08B00352399 /* viewpointsClass.swift */; };
 		BB5901762AE6C08B00352399 /* ViewpointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901732AE6C08B00352399 /* ViewpointsView.swift */; };
 		BB668D4A2AE2A9EB00480B4B /* FoodAndDrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D452AE2A9EB00480B4B /* FoodAndDrinksView.swift */; };
-		F01995172AE1686D006F6091 /* TestComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01995162AE1686D006F6091 /* TestComponent.swift */; };
 		F01995192AE16976006F6091 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01995182AE16976006F6091 /* HomeView.swift */; };
 		F019951B2AE169F2006F6091 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F019951A2AE169F2006F6091 /* CategoryView.swift */; };
 		F01FDAA12AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01FDAA02AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift */; };
@@ -32,6 +31,8 @@
 		F0858B302AE94ACC00BE9193 /* AdaptativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */; };
 		F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */; };
 		F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE68472AE8FCC600B87648 /* DetailView.swift */; };
+		F0D71AD62AEB84530013FED4 /* ScaledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */; };
+		F0D71AD92AEB88C70013FED4 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */; };
 		F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F8F2AE04DE7007EEC49 /* Location.swift */; };
 		F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F912AE04EA3007EEC49 /* Category.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +47,6 @@
 		BB5901722AE6C08B00352399 /* viewpointsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewpointsClass.swift; sourceTree = "<group>"; };
 		BB5901732AE6C08B00352399 /* ViewpointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewpointsView.swift; sourceTree = "<group>"; };
 		BB668D452AE2A9EB00480B4B /* FoodAndDrinksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrinksView.swift; sourceTree = "<group>"; };
-		F01995162AE1686D006F6091 /* TestComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestComponent.swift; sourceTree = "<group>"; };
 		F01995182AE16976006F6091 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F019951A2AE169F2006F6091 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		F01FDAA02AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAndDrinksViewModel.swift; sourceTree = "<group>"; };
@@ -63,6 +63,8 @@
 		F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptativeView.swift; sourceTree = "<group>"; };
 		F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		F0BE68472AE8FCC600B87648 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledButtonStyle.swift; sourceTree = "<group>"; };
+		F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		F0FE8F8F2AE04DE7007EEC49 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F0FE8F912AE04EA3007EEC49 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,7 +126,6 @@
 			children = (
 				F019951A2AE169F2006F6091 /* CategoryView.swift */,
 				F01FDAA22AE2AF2B004B4DB6 /* LocationCardView.swift */,
-				F01995162AE1686D006F6091 /* TestComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -148,6 +149,7 @@
 		F05C5A112ADED8BF006DCF61 /* CiaoNaples */ = {
 			isa = PBXGroup;
 			children = (
+				F0D71AD72AEB88B70013FED4 /* Extensions */,
 				F01995152AE16856006F6091 /* Components */,
 				BB4BBFBA2AE5A9B1000B5DAD /* Daily life */,
 				F0BE68462AE8FCB800B87648 /* Detail */,
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */,
+				F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -205,6 +208,14 @@
 				F0BE68472AE8FCC600B87648 /* DetailView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		F0D71AD72AEB88B70013FED4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F0FE8F4A2AE00655007EEC49 /* Model */ = {
@@ -289,9 +300,10 @@
 				F01FDAA12AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift in Sources */,
 				BB5901742AE6C08B00352399 /* viewpointsStruct.swift in Sources */,
 				BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */,
+				F0D71AD92AEB88C70013FED4 /* ViewExtension.swift in Sources */,
 				F0858B2B2AE947EE00BE9193 /* FolkloricPlacesView.swift in Sources */,
-				F01995172AE1686D006F6091 /* TestComponent.swift in Sources */,
 				F0858B282AE940D300BE9193 /* ViewpointsViewModel.swift in Sources */,
+				F0D71AD62AEB84530013FED4 /* ScaledButtonStyle.swift in Sources */,
 				BB4BBFC22AE5A9B1000B5DAD /* DailyLifeView.swift in Sources */,
 				F01FDAA32AE2AF2B004B4DB6 /* LocationCardView.swift in Sources */,
 				F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */,

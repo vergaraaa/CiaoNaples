@@ -36,14 +36,14 @@ struct dailylifeView: View {
                         
                         TabView {
                             ForEach(viewModel.day){ day in
-                                LocationCardView(location: day)
-                                    .onTapGesture {
-                                        withAnimation(.spring) {
-                                            selectedLocation = day
-                                            showDetail.toggle()
-                                        }
-                                    }
-                                    .matchedGeometryEffect(id: day.id, in: animation)
+//                                LocationCardView(location: day, animation: animation)
+//                                    .onTapGesture {
+//                                        withAnimation(.spring) {
+//                                            selectedLocation = day
+//                                            showDetail.toggle()
+//                                        }
+//                                    }
+//                                    .matchedGeometryEffect(id: day.id, in: animation)
                             }
                         }
                         .tabViewStyle(.page)
@@ -59,14 +59,14 @@ struct dailylifeView: View {
                         
                         TabView {
                             ForEach(viewModel.night){ night in
-                                LocationCardView(location: night)
-                                    .onTapGesture {
-                                        withAnimation(.spring) {
-                                            selectedLocation = night
-                                            showDetail.toggle()
-                                        }
-                                    }
-                                    .matchedGeometryEffect(id: night.id, in: animation)
+//                                LocationCardView(location: night, animation: animation)
+//                                    .onTapGesture {
+//                                        withAnimation(.spring) {
+//                                            selectedLocation = night
+//                                            showDetail.toggle()
+//                                        }
+//                                    }
+//                                    .matchedGeometryEffect(id: night.id, in: animation)
                             }
                         }
                         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
@@ -76,16 +76,16 @@ struct dailylifeView: View {
                 .padding(.vertical)
             }
             
-            if showDetail {
-                if let location = selectedLocation {
-                    DetailView(
-                        showDetail: $showDetail,
-                        selectedLocation: $selectedLocation,
-                        location: location,
-                        animation: animation
-                    )
-                }
-            }
+//            if showDetail {
+//                if let location = selectedLocation {
+//                    DetailView(
+//                        showDetail: $showDetail,
+//                        selectedLocation: $selectedLocation,
+//                        location: location,
+//                        animation: animation
+//                    )
+//                }
+//            }
         }
         .navigationBarBackButtonHidden(showDetail ? true : false)
     }

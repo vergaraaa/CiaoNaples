@@ -8,87 +8,69 @@
 import SwiftUI
 
 struct FoodAndDrinksView: View {
-    let tabViewHeight = 350.0
-    
-    var viewModel = FoodAndDrinksViewModel()
+    @State var currentLocation: Location?
+    @State var showDetailPage = false
     
     @Namespace var animation
     
-    @State var selectedLocation: Location?
-    @State var showDetail = false
+    @State var animateView: Bool = false
+    @State var animateContent: Bool = false
+    @State var scrollOffset: CGFloat = 0
     
-    init() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color(Category.foodAndDrinks.color))
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor(Category.foodAndDrinks.color).withAlphaComponent(0.2)
-        UIPageControl.appearance().backgroundStyle = .prominent
-    }
+    @Environment(\.colorScheme) var colorScheme
+    
+    var viewModel = FoodAndDrinksViewModel()
     
     var body: some View {
-        ZStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 10) {
-                    VStack(alignment: .leading, spacing: -40) {
-                        Text("Food")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .fontDesign(.rounded)
-                            .padding(.horizontal)
-                        
-                        TabView {
-                            ForEach(viewModel.food){ food in
-                                LocationCardView(location: food)
-                                    .onTapGesture {
-                                        withAnimation(.spring) {
-                                            selectedLocation = food
-                                            showDetail.toggle()
-                                        }
-                                    }
-                                    .matchedGeometryEffect(id: food.id, in: animation)
-                            }
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 0) {
+                
+//                .opacity(showDetailPage ? 0 : 1)
+                
+                ForEach(viewModel.food) { food in
+                    Button {
+                        withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
+                            currentLocation = food
+                            showDetailPage = true
                         }
-                        .tabViewStyle(.page)
-                        .frame(height: tabViewHeight)
+                    } label: {
+                        LocationCardView(
+                            location: food,
+                            currentLocation: currentLocation,
+                            showDetailPage: showDetailPage,
+                            animateView: animateView,
+                            animation: animation
+                        )
+                        .scaleEffect(currentLocation?.id == food.id && showDetailPage ? 1 : 0.93)
                     }
-                    
-                    VStack(alignment: .leading, spacing: -40) {
-                        Text("Drinks")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .fontDesign(.rounded)
-                            .padding(.horizontal)
-                        
-                        TabView {
-                            ForEach(viewModel.drinks){ drink in
-                                LocationCardView(location: drink)
-                                    .onTapGesture {
-                                        withAnimation(.spring) {
-                                            selectedLocation = drink
-                                            showDetail.toggle()
-                                        }
-                                    }
-                                    .matchedGeometryEffect(id: drink.id, in: animation)
-                            }
-                        }
-                        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                        .frame(height: tabViewHeight)
-                    }
+                    .buttonStyle(ScaledButtonStyle())
+                    .opacity(showDetailPage ? (currentLocation?.id == food.id ? 1 : 0) : 1)
                 }
-                .padding(.vertical)
             }
-            
-            if showDetail {
-                if let location = selectedLocation {
-                    DetailView(
-                        showDetail: $showDetail,
-                        selectedLocation: $selectedLocation,
-                        location: location,
-                        animation: animation
-                    )
-                }
+            .padding(.vertical)
+        }
+        .overlay {
+            if let location = currentLocation, showDetailPage {
+                DetailView(
+                    location: location,
+                    currentLocation: $currentLocation,
+                    showDetailPage: $showDetailPage,
+                    animateView: $animateView,
+                    animateContent: $animateContent,
+                    scrollOffset: $scrollOffset,
+                    animation: animation
+                )
+                .ignoresSafeArea(.container, edges: .top)
             }
         }
-        .animation(.spring, value: selectedLocation)
-        .navigationBarBackButtonHidden(showDetail ? true : false)
+        .background(alignment: .top) {
+            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                .fill(colorScheme == .light ? .white : .black)
+                .frame(height: animateView ? nil : 350, alignment: .top)
+                .scaleEffect(animateView ? 1 : 0.93)
+                .opacity(animateView ? 1 : 0)
+                .ignoresSafeArea()
+        }
     }
 }
 

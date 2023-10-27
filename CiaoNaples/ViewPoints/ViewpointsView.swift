@@ -25,29 +25,29 @@ struct ViewpointsView: View {
                         .fontDesign(.rounded)
                     
                     ForEach(viewModel.viewpoints) { viewpoint in
-                        LocationCardView(location: viewpoint)
-                            .onTapGesture {
-                                withAnimation(.spring) {
-                                    selectedLocation = viewpoint
-                                    showDetail.toggle()
-                                }
-                            }
-                            .matchedGeometryEffect(id: viewpoint.id, in: animation, isSource: true)
-                            .padding(.bottom)
+//                        LocationCardView(location: viewpoint, animation: animation)
+//                            .onTapGesture {
+//                                withAnimation(.spring) {
+//                                    selectedLocation = viewpoint
+//                                    showDetail.toggle()
+//                                }
+//                            }
+//                            .matchedGeometryEffect(id: viewpoint.id, in: animation, isSource: true)
+//                            .padding(.bottom)
                     }
                 }
             }
             
-            if showDetail {
-                if let location = selectedLocation {
-                    DetailView(
-                        showDetail: $showDetail,
-                        selectedLocation: $selectedLocation,
-                        location: location,
-                        animation: animation
-                    )
-                }
-            }
+//            if showDetail {
+//                if let location = selectedLocation {
+//                    DetailView(
+//                        showDetail: $showDetail,
+//                        selectedLocation: $selectedLocation,
+//                        location: location,
+//                        animation: animation
+//                    )
+//                }
+//            }
         }
         .animation(.spring, value: selectedLocation)
         .navigationBarBackButtonHidden(showDetail ? true : false)

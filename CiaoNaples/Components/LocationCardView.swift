@@ -10,41 +10,52 @@ import SwiftUI
 struct LocationCardView: View {
     let location: Location
     
+    let currentLocation: Location?
+    let showDetailPage: Bool
+    let animateView: Bool
+    
+    let animation: Namespace.ID
+    
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            Image(location.coverImage)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 350, height: 250)
-                .cornerRadius(20)
-            
-            VStack(alignment: .trailing){
-                Text(location.name)
-                    .font(.largeTitle)
-                    .bold()
-                    .foregroundStyle(.white)
-                    .padding()
-                    .fontDesign(.rounded)
-                    .frame(width: 350, alignment: .leading)
+        VStack(alignment: .leading, spacing: 15) {
+            ZStack(alignment: .bottom) {
+                GeometryReader { proxy in
+                    let size = proxy.size
+                    
+                    Image(location.coverImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: size.width, height: size.height)
+                }
+                .frame(height: 400)
+                
+                LinearGradient(colors: [
+                    .clear,
+                    .black.opacity(0.2),
+                    .black.opacity(0.5)
+                ], startPoint: .top, endPoint: .bottom)
+                
+                VStack(alignment: .leading, spacing: 8, content: {
+                    Text(location.name)
+                        .font(.largeTitle.bold())
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                })
+                .foregroundStyle(.white)
+                .padding()
             }
-            .frame(width: 350)
-            .background(
-                Color.gray
-                    .opacity(0.5)
-                    .frame(width: 350)
-                    .clipShape(.rect(
-                        topLeadingRadius: 0,
-                        bottomLeadingRadius: 20,
-                        bottomTrailingRadius: 20,
-                        topTrailingRadius: 0
-                    )
-                    )
-                    .blur(radius: 1)
-            )
         }
+        .matchedGeometryEffect(id: location.id, in: animation, anchor: .leading)
     }
 }
 
 #Preview {
-    LocationCardView(location: Location.locations[0])
+    @Namespace var animation
+    
+    return LocationCardView(
+        location: Location.locations[0],
+        currentLocation: Location.locations[0],
+        showDetailPage: false,
+        animateView: false,
+        animation: animation
+    )
 }
