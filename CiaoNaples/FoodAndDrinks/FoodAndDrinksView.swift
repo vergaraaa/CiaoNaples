@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct FoodAndDrinksView: View {
-    @State var currentLocation: Location?
-    @State var showDetailPage = false
-    
     @Namespace var animation
+    @Environment(\.colorScheme) var colorScheme
+    
+    @State var showDetailPage = false
+    @State var currentLocation: Location?
     
     @State var animateView: Bool = false
     @State var animateContent: Bool = false
     @State var scrollOffset: CGFloat = 0
     
-    @Environment(\.colorScheme) var colorScheme
-    
     var viewModel = FoodAndDrinksViewModel()
+    
     
     var body: some View {
         ScrollView(showsIndicators: false) {

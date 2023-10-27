@@ -8,86 +8,66 @@
 import SwiftUI
 
 struct dailylifeView: View {
-    let tabViewHeight = 350.0
+    @Namespace var animation
+    @Environment(\.colorScheme) var colorScheme
+    
+    @State var showDetailPage = false
+    @State var currentLocation: Location?
+    
+    @State var animateView: Bool = false
+    @State var animateContent: Bool = false
+    @State var scrollOffset: CGFloat = 0
     
     var viewModel = DailyLifeViewModel()
-    
-    @Namespace var animation
-    
-    @State var selectedLocation: Location?
-    @State var showDetail = false
-    
-    init() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color(Category.dailyLife.color))
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor(Category.dailyLife.color).withAlphaComponent(0.2)
-        UIPageControl.appearance().backgroundStyle = .prominent
-    }
+
     
     var body: some View {
-        ZStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 10) {
-                    VStack(alignment: .leading, spacing: -40) {
-                        Text("Day")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .fontDesign(.rounded)
-                            .padding(.horizontal)
-                        
-                        TabView {
-                            ForEach(viewModel.day){ day in
-//                                LocationCardView(location: day, animation: animation)
-//                                    .onTapGesture {
-//                                        withAnimation(.spring) {
-//                                            selectedLocation = day
-//                                            showDetail.toggle()
-//                                        }
-//                                    }
-//                                    .matchedGeometryEffect(id: day.id, in: animation)
-                            }
+        ScrollView(showsIndicators: false) {
+            VStack(spacing: 0) {
+                ForEach(viewModel.day) { day in
+                    Button {
+                        withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
+                            currentLocation = day
+                            showDetailPage = true
                         }
-                        .tabViewStyle(.page)
-                        .frame(height: tabViewHeight)
+                    } label: {
+                        LocationCardView(
+                            location: day,
+                            currentLocation: currentLocation,
+                            showDetailPage: showDetailPage,
+                            animateView: animateView,
+                            animation: animation
+                        )
+                        .scaleEffect(currentLocation?.id == day.id && showDetailPage ? 1 : 0.93)
                     }
-                    
-                    VStack(alignment: .leading, spacing: -40) {
-                        Text("Night")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .fontDesign(.rounded)
-                            .padding(.horizontal)
-                        
-                        TabView {
-                            ForEach(viewModel.night){ night in
-//                                LocationCardView(location: night, animation: animation)
-//                                    .onTapGesture {
-//                                        withAnimation(.spring) {
-//                                            selectedLocation = night
-//                                            showDetail.toggle()
-//                                        }
-//                                    }
-//                                    .matchedGeometryEffect(id: night.id, in: animation)
-                            }
-                        }
-                        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                        .frame(height: tabViewHeight)
-                    }
+                    .buttonStyle(ScaledButtonStyle())
+                    .opacity(showDetailPage ? (currentLocation?.id == day.id ? 1 : 0) : 1)
                 }
-                .padding(.vertical)
             }
-            
-//            if showDetail {
-//                if let location = selectedLocation {
-//                    DetailView(
-//                        showDetail: $showDetail,
-//                        selectedLocation: $selectedLocation,
-//                        location: location,
-//                        animation: animation
-//                    )
-//                }
-//            }
+            .padding(.vertical)
         }
-        .navigationBarBackButtonHidden(showDetail ? true : false)
+        .overlay {
+            if let location = currentLocation, showDetailPage {
+                DetailView(
+                    location: location,
+                    currentLocation: $currentLocation,
+                    showDetailPage: $showDetailPage,
+                    animateView: $animateView,
+                    animateContent: $animateContent,
+                    scrollOffset: $scrollOffset,
+                    animation: animation
+                )
+                .ignoresSafeArea(.container, edges: .top)
+            }
+        }
+        .background(alignment: .top) {
+            RoundedRectangle(cornerRadius: 15, style: .continuous)
+                .fill(colorScheme == .light ? .white : .black)
+                .frame(height: animateView ? nil : 350, alignment: .top)
+                .scaleEffect(animateView ? 1 : 0.93)
+                .opacity(animateView ? 1 : 0)
+                .ignoresSafeArea()
+        }
     }
 }
 
