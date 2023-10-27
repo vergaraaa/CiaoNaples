@@ -7,7 +7,9 @@
 
 import Foundation
 
-class FoodAndDrinksViewModel {
+class FoodAndDrinksViewModel: ObservableObject{
+    @Published var picker = "Food"
+    
     var food: [Location] {
         return Location.locations.filter({ $0.category == .foodAndDrinks && $0.tag == "Food" })
     }

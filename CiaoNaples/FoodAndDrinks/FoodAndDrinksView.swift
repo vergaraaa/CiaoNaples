@@ -18,33 +18,62 @@ struct FoodAndDrinksView: View {
     @State var animateContent: Bool = false
     @State var scrollOffset: CGFloat = 0
     
-    var viewModel = FoodAndDrinksViewModel()
+    @StateObject var viewModel = FoodAndDrinksViewModel()
     
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 0) {
+                Picker("", selection: $viewModel.picker) {
+                    Text("Food").tag("Food")
+                    
+                    Text("Drinks").tag("Drinks")
+                }
+                .padding()
+                .pickerStyle(.segmented)
+                .opacity(showDetailPage ? 0 : 1)
                 
-//                .opacity(showDetailPage ? 0 : 1)
-                
-                ForEach(viewModel.food) { food in
-                    Button {
-                        withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
-                            currentLocation = food
-                            showDetailPage = true
+                if(viewModel.picker == "Food") {
+                    ForEach(viewModel.food) { food in
+                        Button {
+                            withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
+                                currentLocation = food
+                                showDetailPage = true
+                            }
+                        } label: {
+                            LocationCardView(
+                                location: food,
+                                currentLocation: currentLocation,
+                                showDetailPage: showDetailPage,
+                                animateView: animateView,
+                                animation: animation
+                            )
+                            .scaleEffect(currentLocation?.id == food.id && showDetailPage ? 1 : 0.93)
                         }
-                    } label: {
-                        LocationCardView(
-                            location: food,
-                            currentLocation: currentLocation,
-                            showDetailPage: showDetailPage,
-                            animateView: animateView,
-                            animation: animation
-                        )
-                        .scaleEffect(currentLocation?.id == food.id && showDetailPage ? 1 : 0.93)
+                        .buttonStyle(ScaledButtonStyle())
+                        .opacity(showDetailPage ? (currentLocation?.id == food.id ? 1 : 0) : 1)
                     }
-                    .buttonStyle(ScaledButtonStyle())
-                    .opacity(showDetailPage ? (currentLocation?.id == food.id ? 1 : 0) : 1)
+                }
+                else {
+                    ForEach(viewModel.drinks) { drink in
+                        Button {
+                            withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
+                                currentLocation = drink
+                                showDetailPage = true
+                            }
+                        } label: {
+                            LocationCardView(
+                                location: drink,
+                                currentLocation: currentLocation,
+                                showDetailPage: showDetailPage,
+                                animateView: animateView,
+                                animation: animation
+                            )
+                            .scaleEffect(currentLocation?.id == drink.id && showDetailPage ? 1 : 0.93)
+                        }
+                        .buttonStyle(ScaledButtonStyle())
+                        .opacity(showDetailPage ? (currentLocation?.id == drink.id ? 1 : 0) : 1)
+                    }
                 }
             }
             .padding(.vertical)
