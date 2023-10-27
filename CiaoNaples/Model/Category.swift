@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Category: Int, CaseIterable, Identifiable {
+enum Category: Int, CaseIterable, Identifiable, Codable {
     case foodAndDrinks
     case dailyLife
     case viewpoints

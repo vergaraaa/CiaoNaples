@@ -19,6 +19,18 @@ struct DetailView: View {
     
     var animation: Namespace.ID
     
+    @EnvironmentObject var favoritesViewModel : FavoritesViewModel
+    
+    var isFavorite: Bool {
+        for favorite in favoritesViewModel.favorites {
+            if favorite.id == location.id {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
@@ -33,6 +45,21 @@ struct DetailView: View {
                     .scaleEffect(animateView ? 1 : 0.93)
                     
                     VStack(spacing: 15) {
+                        Button {
+                            if isFavorite {
+                                favoritesViewModel.removeFavorite(location: location)
+                            }
+                            else {
+                                favoritesViewModel.addFavorite(location: location)
+                            }
+                        } label: {
+                            Label(
+                                title: { Text(isFavorite ? "Delete": "Save") },
+                                icon: { Image(systemName: isFavorite ? "heart.fill" : "heart") }
+                            )
+                        }
+                        
+                        
                         Text(dummyText)
                             .multilineTextAlignment(.leading)
                             .lineSpacing(10)

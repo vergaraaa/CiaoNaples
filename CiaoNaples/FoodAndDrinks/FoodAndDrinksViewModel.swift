@@ -11,10 +11,10 @@ class FoodAndDrinksViewModel: ObservableObject{
     @Published var picker = "Food"
     
     var food: [Location] {
-        return Location.locations.filter({ $0.category == .foodAndDrinks && $0.tag == "Food" })
+        return Location.locations.filter({ $0.category == Category.foodAndDrinks.id && $0.tag == "Food" })
     }
     
     var drinks: [Location] {
-        return Location.locations.filter({ $0.category == .foodAndDrinks && $0.tag == "Drinks" })
+        return Location.locations.filter({ $0.category == Category.foodAndDrinks.id && $0.tag == "Drinks" })
     }
 }

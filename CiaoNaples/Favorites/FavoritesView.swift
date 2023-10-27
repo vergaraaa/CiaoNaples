@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @EnvironmentObject var viewModel : FavoritesViewModel
+    
     var body: some View {
-        VStack{
-            
+        ScrollView(showsIndicators: false) {
+            ForEach(viewModel.favorites) { favorite in
+                Text(favorite.name)
+            }
         }
     }
 }

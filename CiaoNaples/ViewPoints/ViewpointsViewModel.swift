@@ -9,6 +9,6 @@ import Foundation
 
 class ViewpointsViewModel {
     var viewpoints: [Location] {
-        return Location.locations.filter({ $0.category == .viewpoints })
+        return Location.locations.filter({ $0.category == Category.viewpoints.id })
     }
 }

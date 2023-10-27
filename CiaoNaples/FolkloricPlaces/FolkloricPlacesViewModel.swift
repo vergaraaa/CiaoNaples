@@ -9,6 +9,6 @@ import Foundation
 
 class FolkloricPlacesViewModel {
     var folkloricPlaces: [Location] {
-        return Location.locations.filter({ $0.category == .folkloricPlaces })
+        return Location.locations.filter({ $0.category == Category.folkloricPlaces.id })
     }
 }

@@ -30,6 +30,8 @@
 		F0858B2D2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */; };
 		F0858B302AE94ACC00BE9193 /* AdaptativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */; };
 		F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */; };
+		F0BA49B02AEC341800EEA44F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA49AF2AEC341800EEA44F /* DataService.swift */; };
+		F0BA49B22AEC347E00EEA44F /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */; };
 		F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE68472AE8FCC600B87648 /* DetailView.swift */; };
 		F0D71AD62AEB84530013FED4 /* ScaledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */; };
 		F0D71AD92AEB88C70013FED4 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */; };
@@ -62,6 +64,8 @@
 		F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkloricPlacesViewModel.swift; sourceTree = "<group>"; };
 		F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptativeView.swift; sourceTree = "<group>"; };
 		F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		F0BA49AF2AEC341800EEA44F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		F0BE68472AE8FCC600B87648 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledButtonStyle.swift; sourceTree = "<group>"; };
 		F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 		F05C5A112ADED8BF006DCF61 /* CiaoNaples */ = {
 			isa = PBXGroup;
 			children = (
+				F0BA49AE2AEC340500EEA44F /* Data */,
 				F0D71AD72AEB88B70013FED4 /* Extensions */,
 				F01995152AE16856006F6091 /* Components */,
 				BB4BBFBA2AE5A9B1000B5DAD /* Daily life */,
@@ -200,6 +205,15 @@
 				F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F0BA49AE2AEC340500EEA44F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F0BA49AF2AEC341800EEA44F /* DataService.swift */,
+				F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		F0BE68462AE8FCB800B87648 /* Detail */ = {
@@ -306,6 +320,7 @@
 				F0D71AD62AEB84530013FED4 /* ScaledButtonStyle.swift in Sources */,
 				BB4BBFC22AE5A9B1000B5DAD /* DailyLifeView.swift in Sources */,
 				F01FDAA32AE2AF2B004B4DB6 /* LocationCardView.swift in Sources */,
+				F0BA49B02AEC341800EEA44F /* DataService.swift in Sources */,
 				F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */,
 				BB668D4A2AE2A9EB00480B4B /* FoodAndDrinksView.swift in Sources */,
 				BB4BBFC12AE5A9B1000B5DAD /* nightStruct.swift in Sources */,
@@ -318,6 +333,7 @@
 				F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */,
 				F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */,
 				BB4BBFC02AE5A9B1000B5DAD /* nightClass.swift in Sources */,
+				F0BA49B22AEC347E00EEA44F /* FavoritesViewModel.swift in Sources */,
 				F01995192AE16976006F6091 /* HomeView.swift in Sources */,
 				BB4BBFC42AE5A9B1000B5DAD /* dailyClass.swift in Sources */,
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,

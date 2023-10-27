@@ -11,10 +11,10 @@ class DailyLifeViewModel: ObservableObject {
     @Published var picker = "Day"
     
     var day: [Location] {
-        return Location.locations.filter({ $0.category == .dailyLife && $0.tag == "Day" })
+        return Location.locations.filter({ $0.category == Category.dailyLife.id && $0.tag == "Day" })
     }
     
     var night: [Location] {
-        return Location.locations.filter({ $0.category == .dailyLife && $0.tag == "Night" })
+        return Location.locations.filter({ $0.category == Category.dailyLife.id && $0.tag == "Night" })
     }
 }

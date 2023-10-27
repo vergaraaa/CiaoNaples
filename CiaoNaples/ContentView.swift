@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let appearance: UITabBarAppearance = UITabBarAppearance()
+    @StateObject var viewModel = FavoritesViewModel.shared
     
     init() {
         UITabBar.appearance().scrollEdgeAppearance = appearance
@@ -28,6 +29,7 @@ struct ContentView: View {
                 }
                 .tag(1)
         }
+        .environmentObject(viewModel)
     }
 }
 
