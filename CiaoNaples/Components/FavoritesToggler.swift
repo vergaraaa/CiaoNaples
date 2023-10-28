@@ -8,11 +8,41 @@
 import SwiftUI
 
 struct FavoritesToggler: View {
+    let location: Location
+    
+    @EnvironmentObject var favoritesViewModel : FavoritesViewModel
+    
+    var isFavorite: Bool {
+        for favorite in favoritesViewModel.favorites {
+            if favorite.id == location.id {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            if isFavorite {
+                favoritesViewModel.removeFavorite(location: location)
+            }
+            else {
+                favoritesViewModel.addFavorite(location: location)
+            }
+        } label: {
+            Image(systemName: isFavorite ? "heart.fill" : "heart")
+                .foregroundStyle(Category(rawValue: location.category)?.color ?? .primary)
+                .font(.title3)
+                .frame(width: 50, height: 50)
+                .background(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .shadow(radius: 5)
+        }
     }
 }
 
 #Preview {
-    FavoritesToggler()
+    FavoritesToggler(location: Location.locations[0])
+        .environmentObject(FavoritesViewModel())
 }

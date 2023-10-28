@@ -29,20 +29,7 @@ struct DetailView: View {
                     LocationCardView(location: location)
                     
                     VStack(spacing: 15) {
-                        Button {
-                            if isFavorite {
-                                favoritesViewModel.removeFavorite(location: location)
-                            }
-                            else {
-                                favoritesViewModel.addFavorite(location: location)
-                            }
-                        } label: {
-                            Label(
-                                title: { Text(isFavorite ? "Delete": "Save") },
-                                icon: { Image(systemName: isFavorite ? "heart.fill" : "heart") }
-                            )
-                        }
-                        
+                        FavoritesToggler(location: location)
                         
                         Text(dummyText)
                             .multilineTextAlignment(.leading)
