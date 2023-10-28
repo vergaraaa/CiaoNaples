@@ -31,7 +31,7 @@ struct HomeView: View {
                             CategoryView(category: .foodAndDrinks)
                         }
                         
-                        NavigationLink(destination: dailylifeView()) {
+                        NavigationLink(destination: DailyLifeView()) {
                             CategoryView(category: .dailyLife)
                         }
                         

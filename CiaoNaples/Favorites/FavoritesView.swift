@@ -11,9 +11,15 @@ struct FavoritesView: View {
     @EnvironmentObject var viewModel : FavoritesViewModel
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            ForEach(viewModel.favorites) { favorite in
-                Text(favorite.name)
+        NavigationStack {
+            ScrollView(showsIndicators: false) {
+                ForEach(viewModel.favorites) { favorite in
+                    NavigationLink {
+                        DetailView(location: favorite)
+                    } label: {
+                        LocationCardView(location: favorite)
+                    }
+                }
             }
         }
     }

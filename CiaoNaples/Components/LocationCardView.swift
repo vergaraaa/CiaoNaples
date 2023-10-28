@@ -10,12 +10,6 @@ import SwiftUI
 struct LocationCardView: View {
     let location: Location
     
-    let currentLocation: Location?
-    let showDetailPage: Bool
-    let animateView: Bool
-    
-    let animation: Namespace.ID
-    
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             ZStack(alignment: .bottom) {
@@ -46,18 +40,9 @@ struct LocationCardView: View {
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: 25))
-        .matchedGeometryEffect(id: location.id, in: animation, anchor: .leading)
     }
 }
 
 #Preview {
-    @Namespace var animation
-    
-    return LocationCardView(
-        location: Location.locations[0],
-        currentLocation: Location.locations[0],
-        showDetailPage: false,
-        animateView: false,
-        animation: animation
-    )
+    LocationCardView(location: Location.locations[0])
 }
