@@ -29,6 +29,7 @@ struct DailyLifeView: View {
                             DetailView(location: day)
                         } label: {
                             LocationCardView(location: day)
+                                .padding()
                         }
                     }
                 }
@@ -38,6 +39,7 @@ struct DailyLifeView: View {
                             DetailView(location: nigth)
                         } label: {
                             LocationCardView(location: nigth)
+                                .padding()
                         }
                     }
                     

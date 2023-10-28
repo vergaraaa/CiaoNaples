@@ -37,7 +37,7 @@ struct FavoritesToggler: View {
                 .frame(width: 50, height: 50)
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-                .shadow(radius: 5)
+                .shadow(color: .gray, radius: 5)
         }
     }
 }

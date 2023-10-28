@@ -5,12 +5,11 @@
 //  Created by Edgar Ernesto Vergara Montiel on 25/10/23.
 //
 
+import MapKit
 import SwiftUI
 
 struct DetailView: View {
     let location: Location
-    
-    @EnvironmentObject var favoritesViewModel : FavoritesViewModel
     
     var isFavorite: Bool {
         for favorite in favoritesViewModel.favorites {
@@ -22,47 +21,139 @@ struct DetailView: View {
         return false
     }
     
+    var categoryColor: Color {
+        return Category(rawValue: location.category)?.color ?? .accentColor
+    }
+    
+    let columns = [
+        GridItem(.adaptive(minimum: 150)),
+        GridItem(.adaptive(minimum: 150)),
+    ]
+    
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+    }
+    
+    @EnvironmentObject var favoritesViewModel : FavoritesViewModel
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @GestureState private var dragOffset = CGSize.zero
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack {
-                VStack {
-                    LocationCardView(location: location)
-                    
-                    VStack(spacing: 15) {
-                        FavoritesToggler(location: location)
+            VStack(spacing: 0) {
+                ZStack(alignment: .bottomTrailing) {
+                    TabView {
+                        LocationCardView(location: location, isFromDetail: true)
                         
-                        Text(dummyText)
-                            .multilineTextAlignment(.leading)
-                            .lineSpacing(10)
-                            .padding(.bottom, 20)
-                        
-                        Divider()
-                        
-                        Button {
-                            
-                        } label: {
-                            Label(
-                                title: { Text("Share Story") },
-                                icon: { Image(systemName: "square.and.arrow.up.fill") }
-                            )
-                            .foregroundStyle(.primary)
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 25)
-                            .background {
-                                RoundedRectangle(cornerRadius: 5, style: .continuous)
-                                    .fill(.ultraThinMaterial)
+                        ForEach(location.images, id: \.self) { image in
+                            GeometryReader { proxy in
+                                let size = proxy.size
+                                Image(image)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: size.width, height: size.height)
+                                    .clipShape(
+                                        .rect(
+                                            topLeadingRadius: 0,
+                                            bottomLeadingRadius: 25,
+                                            bottomTrailingRadius: 25,
+                                            topTrailingRadius: 0
+                                        )
+                                    )
                             }
+                        }
+                        .frame(height: 400)
+                        
+                        
+                    }
+                    .tabViewStyle(.page)
+                    .frame(height: 400, alignment: .top)
+                    .padding(.bottom, 23)
+                    
+                    FavoritesToggler(location: location)
+                        .padding(.horizontal)
+                }
+                
+                VStack(alignment: .leading, spacing: 30) {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text(location.name)
+                            .font(.largeTitle.bold())
+                        
+                        LazyVGrid(columns: columns, alignment: .leading, spacing: 20) {
+                            MedalView(
+                                text: location.topChoice ? "Top choice" : "Good choice",
+                                image: location.topChoice ? "star" : "hand.thumbsup",
+                                color: location.topChoice ? .yellow : categoryColor
+                            )
+                            
+                            MedalView(
+                                text: "Cheap choice",
+                                image: "dollarsign",
+                                color: location.cheapChoice ? categoryColor : .gray
+                            )
+                            
+                            MedalView(
+                                text: "Public transport",
+                                image: "bus",
+                                color: location.cheapChoice ? categoryColor : .gray
+                            )
+                            
+                            if let ticketNeeded = location.ticketNeeded {
+                                MedalView(
+                                    text: "Ticket needed",
+                                    image: "ticket",
+                                    color: ticketNeeded ? categoryColor : .gray
+                                )
+                            }
+                        }
+                        .padding()
+                        .background(Color(UIColor.systemBackground))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .shadow(color: .gray, radius: 3)
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Description")
+                            .font(.title.bold())
+                        
+                        
+                        Text(location.locDescription)
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Recommendations")
+                            .font(.title.bold())
+                        
+                        ForEach(location.recommendations, id: \.self) { recommendation in
+                            Text("👉 \(recommendation)")
                         }
                     }
                 }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .fontDesign(.rounded)
+                
+                Map {
+                    Marker(location.name, coordinate: coordinate)
+                        .tint(categoryColor)
+                }
+                .padding(.top, 30)
+                .frame(height: 500)
             }
+            
         }
-        .ignoresSafeArea(.container, edges: .top)
+//        .ignoresSafeArea(edges: .top)
+//        .navigationBarBackButtonHidden(true)
+//        .gesture(DragGesture().updating($dragOffset, body: { (value, state, transaction) in
+//            if(value.startLocation.x < 20 && value.translation.width > 100) {
+//                self.mode.wrappedValue.dismiss()
+//            }
+//        }))
     }
 }
 
 #Preview {
     DetailView(location: Location.locations[0])
+        .environmentObject(FavoritesViewModel.shared)
 }
-
-var dummyText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

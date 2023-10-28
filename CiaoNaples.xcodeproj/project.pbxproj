@@ -36,6 +36,7 @@
 		F0D71AD62AEB84530013FED4 /* ScaledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */; };
 		F0D71AD92AEB88C70013FED4 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */; };
 		F0FA87C92AECBBF6006DAEF6 /* FavoritesToggler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FA87C82AECBBF6006DAEF6 /* FavoritesToggler.swift */; };
+		F0FA87CB2AECCD5C006DAEF6 /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FA87CA2AECCD5C006DAEF6 /* MedalView.swift */; };
 		F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F8F2AE04DE7007EEC49 /* Location.swift */; };
 		F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F912AE04EA3007EEC49 /* Category.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,8 @@
 		F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledButtonStyle.swift; sourceTree = "<group>"; };
 		F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		F0FA87C82AECBBF6006DAEF6 /* FavoritesToggler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesToggler.swift; sourceTree = "<group>"; };
+		F0FA87CA2AECCD5C006DAEF6 /* MedalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
+		F0FA87CC2AECDDBE006DAEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F0FE8F8F2AE04DE7007EEC49 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F0FE8F912AE04EA3007EEC49 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +89,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB4BBFBA2AE5A9B1000B5DAD /* Daily life */ = {
+		BB4BBFBA2AE5A9B1000B5DAD /* DailyLife */ = {
 			isa = PBXGroup;
 			children = (
 				BB4BBFBB2AE5A9B1000B5DAD /* nightClass.swift */,
@@ -96,7 +99,7 @@
 				BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */,
 				F05E793A2AE838D500582A7A /* DailyLifeViewModel.swift */,
 			);
-			path = "Daily life";
+			path = DailyLife;
 			sourceTree = "<group>";
 		};
 		BB5901702AE6C08B00352399 /* ViewPoints */ = {
@@ -133,6 +136,7 @@
 				F019951A2AE169F2006F6091 /* CategoryView.swift */,
 				F01FDAA22AE2AF2B004B4DB6 /* LocationCardView.swift */,
 				F0FA87C82AECBBF6006DAEF6 /* FavoritesToggler.swift */,
+				F0FA87CA2AECCD5C006DAEF6 /* MedalView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -156,10 +160,11 @@
 		F05C5A112ADED8BF006DCF61 /* CiaoNaples */ = {
 			isa = PBXGroup;
 			children = (
+				F0FA87CC2AECDDBE006DAEF6 /* Info.plist */,
 				F0BA49AE2AEC340500EEA44F /* Data */,
 				F0D71AD72AEB88B70013FED4 /* Extensions */,
 				F01995152AE16856006F6091 /* Components */,
-				BB4BBFBA2AE5A9B1000B5DAD /* Daily life */,
+				BB4BBFBA2AE5A9B1000B5DAD /* DailyLife */,
 				F0BE68462AE8FCB800B87648 /* Detail */,
 				F0A4AA6E2AE16E1900A83D01 /* Favorites */,
 				F0858B292AE947AA00BE9193 /* FolkloricPlaces */,
@@ -318,6 +323,7 @@
 				BB5901742AE6C08B00352399 /* viewpointsStruct.swift in Sources */,
 				BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */,
 				F0D71AD92AEB88C70013FED4 /* ViewExtension.swift in Sources */,
+				F0FA87CB2AECCD5C006DAEF6 /* MedalView.swift in Sources */,
 				F0858B2B2AE947EE00BE9193 /* FolkloricPlacesView.swift in Sources */,
 				F0858B282AE940D300BE9193 /* ViewpointsViewModel.swift in Sources */,
 				F0D71AD62AEB84530013FED4 /* ScaledButtonStyle.swift in Sources */,
@@ -479,6 +485,7 @@
 				DEVELOPMENT_TEAM = 4Y3SF6KR8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CiaoNaples/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -508,6 +515,7 @@
 				DEVELOPMENT_TEAM = 4Y3SF6KR8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CiaoNaples/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

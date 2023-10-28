@@ -27,8 +27,10 @@ struct FoodAndDrinksView: View {
                     ForEach(viewModel.food) { food in
                         NavigationLink {
                             DetailView(location: food)
+                                .toolbarBackground(.red.opacity(0), for: .navigationBar)
                         } label: {
                             LocationCardView(location: food)
+                                .padding()
                         }
                     }
                 }
@@ -38,6 +40,7 @@ struct FoodAndDrinksView: View {
                             DetailView(location: drink)
                         } label: {
                             LocationCardView(location: drink)
+                                .padding()
                         }
                     }
                 }

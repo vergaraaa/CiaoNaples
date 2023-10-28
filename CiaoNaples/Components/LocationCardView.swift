@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LocationCardView: View {
     let location: Location
+    var isFromDetail: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
@@ -20,29 +21,45 @@ struct LocationCardView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(width: size.width, height: size.height)
-                        
+                    
                 }
                 .frame(height: 400)
                 
-                LinearGradient(colors: [
-                    .clear,
-                    .black.opacity(0.2),
-                    .black.opacity(0.5)
-                ], startPoint: .top, endPoint: .bottom)
-                
-                VStack(alignment: .leading, spacing: 8, content: {
-                    Text(location.name)
-                        .font(.largeTitle.bold())
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                })
-                .foregroundStyle(.white)
-                .padding()
+                if !isFromDetail {
+                    LinearGradient(colors: [
+                        .clear,
+                        .black.opacity(0.2),
+                        .black.opacity(0.5)
+                    ], startPoint: .top, endPoint: .bottom)
+                    
+                    VStack(alignment: .leading, spacing: 8, content: {
+                        Text(location.name)
+                            .font(.largeTitle.bold())
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    })
+                    .foregroundStyle(.white)
+                    .padding()
+                }
             }
         }
-        .clipShape(RoundedRectangle(cornerRadius: 25))
+        .overlay(alignment: .topTrailing) {
+            if !isFromDetail {
+                FavoritesToggler(location: location)
+                    .padding()
+            }
+        }
+        .clipShape(
+            .rect(
+                topLeadingRadius: isFromDetail ? 0 : 25,
+                bottomLeadingRadius: 25,
+                bottomTrailingRadius: 25,
+                topTrailingRadius: isFromDetail ? 0 : 25
+            )
+        )
     }
 }
 
 #Preview {
     LocationCardView(location: Location.locations[0])
+        .environmentObject(FavoritesViewModel.shared)
 }

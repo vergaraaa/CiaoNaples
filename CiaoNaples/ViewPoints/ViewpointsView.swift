@@ -29,6 +29,7 @@ struct ViewpointsView: View {
                         DetailView(location: viewpoint)
                     } label: {
                         LocationCardView(location: viewpoint)
+                            .padding()
                     }
                 }
             }

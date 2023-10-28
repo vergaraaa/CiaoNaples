@@ -18,6 +18,7 @@ struct FavoritesView: View {
                         DetailView(location: favorite)
                     } label: {
                         LocationCardView(location: favorite)
+                            .padding()
                     }
                 }
             }

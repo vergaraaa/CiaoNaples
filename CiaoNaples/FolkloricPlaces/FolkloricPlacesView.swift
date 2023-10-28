@@ -20,6 +20,7 @@ struct FolkloricPlacesView: View {
                         DetailView(location: folkloricPlace)
                     } label: {
                         LocationCardView(location: folkloricPlace)
+                            .padding()
                     }
                 }
             }
