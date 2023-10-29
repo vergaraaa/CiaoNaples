@@ -7,13 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB4BBFC02AE5A9B1000B5DAD /* nightClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBB2AE5A9B1000B5DAD /* nightClass.swift */; };
-		BB4BBFC12AE5A9B1000B5DAD /* nightStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBC2AE5A9B1000B5DAD /* nightStruct.swift */; };
 		BB4BBFC22AE5A9B1000B5DAD /* DailyLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBD2AE5A9B1000B5DAD /* DailyLifeView.swift */; };
-		BB4BBFC32AE5A9B1000B5DAD /* dailyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBE2AE5A9B1000B5DAD /* dailyStruct.swift */; };
-		BB4BBFC42AE5A9B1000B5DAD /* dailyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */; };
-		BB5901742AE6C08B00352399 /* viewpointsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901712AE6C08B00352399 /* viewpointsStruct.swift */; };
-		BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901722AE6C08B00352399 /* viewpointsClass.swift */; };
 		BB5901762AE6C08B00352399 /* ViewpointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5901732AE6C08B00352399 /* ViewpointsView.swift */; };
 		BB668D4A2AE2A9EB00480B4B /* FoodAndDrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB668D452AE2A9EB00480B4B /* FoodAndDrinksView.swift */; };
 		F01995192AE16976006F6091 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01995182AE16976006F6091 /* HomeView.swift */; };
@@ -28,13 +22,9 @@
 		F0858B282AE940D300BE9193 /* ViewpointsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B272AE940D300BE9193 /* ViewpointsViewModel.swift */; };
 		F0858B2B2AE947EE00BE9193 /* FolkloricPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2A2AE947EE00BE9193 /* FolkloricPlacesView.swift */; };
 		F0858B2D2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */; };
-		F0858B302AE94ACC00BE9193 /* AdaptativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */; };
 		F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */; };
-		F0BA49B02AEC341800EEA44F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA49AF2AEC341800EEA44F /* DataService.swift */; };
 		F0BA49B22AEC347E00EEA44F /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */; };
 		F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE68472AE8FCC600B87648 /* DetailView.swift */; };
-		F0D71AD62AEB84530013FED4 /* ScaledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */; };
-		F0D71AD92AEB88C70013FED4 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */; };
 		F0FA87C92AECBBF6006DAEF6 /* FavoritesToggler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FA87C82AECBBF6006DAEF6 /* FavoritesToggler.swift */; };
 		F0FA87CB2AECCD5C006DAEF6 /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FA87CA2AECCD5C006DAEF6 /* MedalView.swift */; };
 		F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FE8F8F2AE04DE7007EEC49 /* Location.swift */; };
@@ -42,13 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB4BBFBB2AE5A9B1000B5DAD /* nightClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nightClass.swift; sourceTree = "<group>"; };
-		BB4BBFBC2AE5A9B1000B5DAD /* nightStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nightStruct.swift; sourceTree = "<group>"; };
 		BB4BBFBD2AE5A9B1000B5DAD /* DailyLifeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyLifeView.swift; sourceTree = "<group>"; };
-		BB4BBFBE2AE5A9B1000B5DAD /* dailyStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dailyStruct.swift; sourceTree = "<group>"; };
-		BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dailyClass.swift; sourceTree = "<group>"; };
-		BB5901712AE6C08B00352399 /* viewpointsStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewpointsStruct.swift; sourceTree = "<group>"; };
-		BB5901722AE6C08B00352399 /* viewpointsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewpointsClass.swift; sourceTree = "<group>"; };
 		BB5901732AE6C08B00352399 /* ViewpointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewpointsView.swift; sourceTree = "<group>"; };
 		BB668D452AE2A9EB00480B4B /* FoodAndDrinksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAndDrinksView.swift; sourceTree = "<group>"; };
 		F01995182AE16976006F6091 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -64,13 +48,9 @@
 		F0858B272AE940D300BE9193 /* ViewpointsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewpointsViewModel.swift; sourceTree = "<group>"; };
 		F0858B2A2AE947EE00BE9193 /* FolkloricPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkloricPlacesView.swift; sourceTree = "<group>"; };
 		F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkloricPlacesViewModel.swift; sourceTree = "<group>"; };
-		F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptativeView.swift; sourceTree = "<group>"; };
 		F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
-		F0BA49AF2AEC341800EEA44F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		F0BE68472AE8FCC600B87648 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledButtonStyle.swift; sourceTree = "<group>"; };
-		F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		F0FA87C82AECBBF6006DAEF6 /* FavoritesToggler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesToggler.swift; sourceTree = "<group>"; };
 		F0FA87CA2AECCD5C006DAEF6 /* MedalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
 		F0FA87CC2AECDDBE006DAEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -92,25 +72,19 @@
 		BB4BBFBA2AE5A9B1000B5DAD /* DailyLife */ = {
 			isa = PBXGroup;
 			children = (
-				BB4BBFBB2AE5A9B1000B5DAD /* nightClass.swift */,
-				BB4BBFBC2AE5A9B1000B5DAD /* nightStruct.swift */,
 				BB4BBFBD2AE5A9B1000B5DAD /* DailyLifeView.swift */,
-				BB4BBFBE2AE5A9B1000B5DAD /* dailyStruct.swift */,
-				BB4BBFBF2AE5A9B1000B5DAD /* dailyClass.swift */,
 				F05E793A2AE838D500582A7A /* DailyLifeViewModel.swift */,
 			);
 			path = DailyLife;
 			sourceTree = "<group>";
 		};
-		BB5901702AE6C08B00352399 /* ViewPoints */ = {
+		BB5901702AE6C08B00352399 /* Viewpoints */ = {
 			isa = PBXGroup;
 			children = (
-				BB5901712AE6C08B00352399 /* viewpointsStruct.swift */,
-				BB5901722AE6C08B00352399 /* viewpointsClass.swift */,
 				BB5901732AE6C08B00352399 /* ViewpointsView.swift */,
 				F0858B272AE940D300BE9193 /* ViewpointsViewModel.swift */,
 			);
-			path = ViewPoints;
+			path = Viewpoints;
 			sourceTree = "<group>";
 		};
 		BB668D402AE2A9EB00480B4B /* FoodAndDrinks */ = {
@@ -161,18 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				F0FA87CC2AECDDBE006DAEF6 /* Info.plist */,
-				F0BA49AE2AEC340500EEA44F /* Data */,
-				F0D71AD72AEB88B70013FED4 /* Extensions */,
+				F07B1BDE2AEEEFF5005B7544 /* Core */,
 				F01995152AE16856006F6091 /* Components */,
-				BB4BBFBA2AE5A9B1000B5DAD /* DailyLife */,
-				F0BE68462AE8FCB800B87648 /* Detail */,
-				F0A4AA6E2AE16E1900A83D01 /* Favorites */,
-				F0858B292AE947AA00BE9193 /* FolkloricPlaces */,
-				BB668D402AE2A9EB00480B4B /* FoodAndDrinks */,
-				F0858B2E2AE94ABC00BE9193 /* Helpers */,
-				F01995132AE164DA006F6091 /* Home */,
+				F0BA49AE2AEC340500EEA44F /* Data */,
 				F0FE8F4A2AE00655007EEC49 /* Model */,
-				BB5901702AE6C08B00352399 /* ViewPoints */,
 				F05C5A122ADED8BF006DCF61 /* CiaoNaplesApp.swift */,
 				F05C5A142ADED8BF006DCF61 /* ContentView.swift */,
 				F05C5A162ADED8C0006DCF61 /* Assets.xcassets */,
@@ -189,6 +155,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F07B1BDE2AEEEFF5005B7544 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BB4BBFBA2AE5A9B1000B5DAD /* DailyLife */,
+				F0BE68462AE8FCB800B87648 /* Detail */,
+				F0A4AA6E2AE16E1900A83D01 /* Favorites */,
+				F0858B292AE947AA00BE9193 /* FolkloricPlaces */,
+				BB668D402AE2A9EB00480B4B /* FoodAndDrinks */,
+				F01995132AE164DA006F6091 /* Home */,
+				BB5901702AE6C08B00352399 /* Viewpoints */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		F0858B292AE947AA00BE9193 /* FolkloricPlaces */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,15 +176,6 @@
 				F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */,
 			);
 			path = FolkloricPlaces;
-			sourceTree = "<group>";
-		};
-		F0858B2E2AE94ABC00BE9193 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				F0858B2F2AE94ACC00BE9193 /* AdaptativeView.swift */,
-				F0D71AD52AEB84530013FED4 /* ScaledButtonStyle.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F0A4AA6E2AE16E1900A83D01 /* Favorites */ = {
@@ -218,7 +189,6 @@
 		F0BA49AE2AEC340500EEA44F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F0BA49AF2AEC341800EEA44F /* DataService.swift */,
 				F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */,
 			);
 			path = Data;
@@ -230,14 +200,6 @@
 				F0BE68472AE8FCC600B87648 /* DetailView.swift */,
 			);
 			path = Detail;
-			sourceTree = "<group>";
-		};
-		F0D71AD72AEB88B70013FED4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F0D71AD82AEB88C70013FED4 /* ViewExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F0FE8F4A2AE00655007EEC49 /* Model */ = {
@@ -320,32 +282,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F01FDAA12AE2AAB1004B4DB6 /* FoodAndDrinksViewModel.swift in Sources */,
-				BB5901742AE6C08B00352399 /* viewpointsStruct.swift in Sources */,
-				BB5901752AE6C08B00352399 /* viewpointsClass.swift in Sources */,
-				F0D71AD92AEB88C70013FED4 /* ViewExtension.swift in Sources */,
 				F0FA87CB2AECCD5C006DAEF6 /* MedalView.swift in Sources */,
 				F0858B2B2AE947EE00BE9193 /* FolkloricPlacesView.swift in Sources */,
 				F0858B282AE940D300BE9193 /* ViewpointsViewModel.swift in Sources */,
-				F0D71AD62AEB84530013FED4 /* ScaledButtonStyle.swift in Sources */,
 				BB4BBFC22AE5A9B1000B5DAD /* DailyLifeView.swift in Sources */,
 				F01FDAA32AE2AF2B004B4DB6 /* LocationCardView.swift in Sources */,
-				F0BA49B02AEC341800EEA44F /* DataService.swift in Sources */,
 				F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */,
 				BB668D4A2AE2A9EB00480B4B /* FoodAndDrinksView.swift in Sources */,
-				BB4BBFC12AE5A9B1000B5DAD /* nightStruct.swift in Sources */,
 				F05E793B2AE838D500582A7A /* DailyLifeViewModel.swift in Sources */,
 				F019951B2AE169F2006F6091 /* CategoryView.swift in Sources */,
 				F05C5A152ADED8BF006DCF61 /* ContentView.swift in Sources */,
-				F0858B302AE94ACC00BE9193 /* AdaptativeView.swift in Sources */,
-				BB4BBFC32AE5A9B1000B5DAD /* dailyStruct.swift in Sources */,
 				F0FA87C92AECBBF6006DAEF6 /* FavoritesToggler.swift in Sources */,
 				F0858B2D2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift in Sources */,
 				F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */,
 				F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */,
-				BB4BBFC02AE5A9B1000B5DAD /* nightClass.swift in Sources */,
 				F0BA49B22AEC347E00EEA44F /* FavoritesViewModel.swift in Sources */,
 				F01995192AE16976006F6091 /* HomeView.swift in Sources */,
-				BB4BBFC42AE5A9B1000B5DAD /* dailyClass.swift in Sources */,
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,
 				F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */,
 				BB5901762AE6C08B00352399 /* ViewpointsView.swift in Sources */,
