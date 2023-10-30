@@ -16,11 +16,12 @@ struct HomeView: View {
             VStack {
                 Spacer()
                 
-                Text("Ciao Naples!")
+                Text("What's happening today?")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .fontDesign(.rounded)
                     .padding(.bottom, 50)
+                    .multilineTextAlignment(.center)
                 
                 LazyVGrid(
                     columns: [
