@@ -53,14 +53,6 @@ struct DetailView: View {
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: size.width, height: size.height)
-                                    .clipShape(
-                                        .rect(
-                                            topLeadingRadius: 0,
-                                            bottomLeadingRadius: 25,
-                                            bottomTrailingRadius: 25,
-                                            topTrailingRadius: 0
-                                        )
-                                    )
                             }
                         }
                         .frame(height: 400)
@@ -74,7 +66,7 @@ struct DetailView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 30) {
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 20) {
                         Text(location.name)
                             .font(.largeTitle.bold())
                         

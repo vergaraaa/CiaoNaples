@@ -50,12 +50,7 @@ struct LocationCardView: View {
             }
         }
         .clipShape(
-            .rect(
-                topLeadingRadius: isFromDetail ? 0 : 25,
-                bottomLeadingRadius: 25,
-                bottomTrailingRadius: 25,
-                topTrailingRadius: isFromDetail ? 0 : 25
-            )
+            RoundedRectangle(cornerRadius: isFromDetail ? 0 : 25)
         )
     }
 }
