@@ -23,6 +23,7 @@
 		F0858B2B2AE947EE00BE9193 /* FolkloricPlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2A2AE947EE00BE9193 /* FolkloricPlacesView.swift */; };
 		F0858B2D2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */; };
 		F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */; };
+		F0AB6C912AEFE948006D4E9D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AB6C902AEFE948006D4E9D /* DetailViewModel.swift */; };
 		F0BA49B22AEC347E00EEA44F /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */; };
 		F0BE68482AE8FCC600B87648 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BE68472AE8FCC600B87648 /* DetailView.swift */; };
 		F0FA87C92AECBBF6006DAEF6 /* FavoritesToggler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FA87C82AECBBF6006DAEF6 /* FavoritesToggler.swift */; };
@@ -49,6 +50,7 @@
 		F0858B2A2AE947EE00BE9193 /* FolkloricPlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkloricPlacesView.swift; sourceTree = "<group>"; };
 		F0858B2C2AE947FE00BE9193 /* FolkloricPlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkloricPlacesViewModel.swift; sourceTree = "<group>"; };
 		F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		F0AB6C902AEFE948006D4E9D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		F0BE68472AE8FCC600B87648 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		F0FA87C82AECBBF6006DAEF6 /* FavoritesToggler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesToggler.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				F0BE68472AE8FCC600B87648 /* DetailView.swift */,
+				F0AB6C902AEFE948006D4E9D /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				F0FE8F902AE04DE7007EEC49 /* Location.swift in Sources */,
 				F0A4AA702AE16E3300A83D01 /* FavoritesView.swift in Sources */,
 				F0BA49B22AEC347E00EEA44F /* FavoritesViewModel.swift in Sources */,
+				F0AB6C912AEFE948006D4E9D /* DetailViewModel.swift in Sources */,
 				F01995192AE16976006F6091 /* HomeView.swift in Sources */,
 				F05C5A132ADED8BF006DCF61 /* CiaoNaplesApp.swift in Sources */,
 				F0FE8F922AE04EA3007EEC49 /* Category.swift in Sources */,

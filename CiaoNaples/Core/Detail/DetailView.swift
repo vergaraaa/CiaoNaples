@@ -34,10 +34,10 @@ struct DetailView: View {
         return CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
     }
     
+    @Environment(\.colorScheme) var colorScheme
+    @StateObject var viewModel = DetailViewModel()
     @EnvironmentObject var favoritesViewModel : FavoritesViewModel
     
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @GestureState private var dragOffset = CGSize.zero
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -64,8 +64,6 @@ struct DetailView: View {
                             }
                         }
                         .frame(height: 400)
-                        
-                        
                     }
                     .tabViewStyle(.page)
                     .frame(height: 400, alignment: .top)
@@ -133,23 +131,35 @@ struct DetailView: View {
                 .frame(maxWidth: .infinity)
                 .padding()
                 .fontDesign(.rounded)
-                
-                Map {
-                    Marker(location.name, coordinate: coordinate)
-                        .tint(categoryColor)
-                }
-                .padding(.top, 30)
-                .frame(height: 500)
             }
             
+            Button {
+                viewModel.showSheet.toggle()
+            } label: {
+                Label(
+                    title: { Text("Location") },
+                    icon: { Image(systemName: "mappin") }
+                )
+            }
+            .padding(.bottom, 20)
         }
-//        .ignoresSafeArea(edges: .top)
-//        .navigationBarBackButtonHidden(true)
-//        .gesture(DragGesture().updating($dragOffset, body: { (value, state, transaction) in
-//            if(value.startLocation.x < 20 && value.translation.width > 100) {
-//                self.mode.wrappedValue.dismiss()
-//            }
-//        }))
+        .sheet(isPresented: $viewModel.showSheet, content: {
+            Map {
+                Marker(location.name, coordinate: coordinate)
+                    .tint(categoryColor)
+            }
+            .overlay(alignment: .topTrailing) {
+                Button {
+                    viewModel.showSheet.toggle()
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.largeTitle)
+                        .foregroundStyle(categoryColor)
+                        .clipShape(Circle())
+                }
+                .padding()
+            }
+        })
     }
 }
 
