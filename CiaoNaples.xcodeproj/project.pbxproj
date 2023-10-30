@@ -182,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				F0A4AA6F2AE16E3300A83D01 /* FavoritesView.swift */,
+				F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -189,7 +190,6 @@
 		F0BA49AE2AEC340500EEA44F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F0BA49B12AEC347E00EEA44F /* FavoritesViewModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";

@@ -28,7 +28,7 @@ struct LocationCardView: View {
                 if !isFromDetail {
                     LinearGradient(colors: [
                         .clear,
-                        .black.opacity(0.2),
+                        .black.opacity(0.25),
                         .black.opacity(0.5)
                     ], startPoint: .top, endPoint: .bottom)
                     
@@ -36,6 +36,7 @@ struct LocationCardView: View {
                         Text(location.name)
                             .font(.largeTitle.bold())
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .multilineTextAlignment(.leading)
                     })
                     .foregroundStyle(.white)
                     .padding()

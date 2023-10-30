@@ -12,13 +12,19 @@ struct FavoritesView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView(showsIndicators: false) {
-                ForEach(viewModel.favorites) { favorite in
-                    NavigationLink {
-                        DetailView(location: favorite)
-                    } label: {
-                        LocationCardView(location: favorite)
-                            .padding()
+            if viewModel.favorites.isEmpty {
+                ContentUnavailableView("No favorites", systemImage: "heart", description: Text("You don't have any favorites yet."))
+                    .symbolVariant(.slash)
+            }
+            else {
+                ScrollView(showsIndicators: false) {
+                    ForEach(viewModel.favorites) { favorite in
+                        NavigationLink {
+                            DetailView(location: favorite)
+                        } label: {
+                            LocationCardView(location: favorite)
+                                .padding()
+                        }
                     }
                 }
             }

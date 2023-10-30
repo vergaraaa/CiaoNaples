@@ -96,7 +96,7 @@ struct DetailView: View {
                             MedalView(
                                 text: "Public transport",
                                 image: "bus",
-                                color: location.cheapChoice ? categoryColor : .gray
+                                color: location.publicTransport ? categoryColor : .gray
                             )
                             
                             if let ticketNeeded = location.ticketNeeded {
