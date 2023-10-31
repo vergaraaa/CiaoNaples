@@ -22,6 +22,7 @@ struct FavoritesView: View {
                         .font(.largeTitle.bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
+                        .padding(.top, 50)
                     
                     List {
                             if !viewModel.foodAndDrinks.isEmpty {
